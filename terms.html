@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pogoji uporabe – Top Kuhinja</title>
+  <meta name="description" content="Pogoji uporabe spletne strani Top Kuhinja. Informacije o uporabi spletne strani, omejitvi odgovornosti in pravicah intelektualne lastnine." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://top-kuhinja.eu/terms.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; font-synthesis: none; }
+
+    :root {
+      --cream:   #f8f4ee;
+      --sand:    #e8dcc8;
+      --warm:    #c4a882;
+      --oak:     #8b6445;
+      --espresso:#3d2b1f;
+      --green:   #5a6e4a;
+      --white:   #ffffff;
+      --text:    #2e2018;
+      --muted:   #7a6555;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--text); line-height: 1.7; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.1rem 5%;
+      background: rgba(248, 244, 238, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(196, 168, 130, 0.3);
+      box-shadow: 0 2px 20px rgba(61,43,31,0.08);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; font-weight: 700;
+      color: var(--espresso); text-decoration: none;
+      letter-spacing: 0.5px;
+    }
+    .nav-logo span { color: var(--green); }
+    .nav-back {
+      text-decoration: none; color: var(--muted);
+      font-size: 0.9rem; letter-spacing: 0.5px;
+      display: flex; align-items: center; gap: 0.4rem;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--oak); }
+    .nav-back svg { stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; width: 16px; height: 16px; }
+
+    /* PAGE HEADER */
+    .page-header {
+      background: var(--espresso);
+      padding: 8rem 5% 4rem;
+      text-align: center;
+    }
+    .page-header .section-tag {
+      display: inline-block;
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 2.5px; text-transform: uppercase;
+      color: var(--warm); margin-bottom: 1rem;
+    }
+    .page-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--white); line-height: 1.2;
+      margin-bottom: 0.8rem;
+    }
+    .page-header p { color: rgba(255,255,255,0.55); font-size: 0.9rem; font-weight: 300; }
+
+    /* CONTENT */
+    .policy-wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 5rem 5%;
+    }
+
+    .policy-section { margin-bottom: 3rem; }
+
+    .policy-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; color: var(--espresso);
+      margin-bottom: 1rem; line-height: 1.3;
+      padding-bottom: 0.6rem;
+      border-bottom: 2px solid var(--sand);
+    }
+
+    .policy-section p {
+      color: var(--muted); margin-bottom: 0.9rem;
+      font-weight: 300; font-size: 0.97rem;
+    }
+
+    .policy-section ul {
+      list-style: none; margin: 0.5rem 0 1rem 0;
+      display: flex; flex-direction: column; gap: 0.5rem;
+    }
+    .policy-section ul li {
+      color: var(--muted); font-size: 0.97rem; font-weight: 300;
+      padding-left: 1.4rem; position: relative;
+    }
+    .policy-section ul li::before {
+      content: '–';
+      position: absolute; left: 0;
+      color: var(--warm); font-weight: 700;
+    }
+
+    .policy-section strong { color: var(--espresso); font-weight: 700; }
+
+    .info-box {
+      background: var(--white);
+      border: 1px solid var(--sand);
+      border-left: 4px solid var(--green);
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 1rem 0;
+    }
+    .info-box p { margin: 0; }
+
+    /* FOOTER */
+    footer {
+      background: var(--espresso);
+      padding: 2.5rem 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem; font-weight: 700;
+      color: var(--warm); text-decoration: none;
+    }
+    .footer-logo span { color: var(--sand); }
+    .footer-links {
+      display: flex; align-items: center; gap: 1.8rem; flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.45); text-decoration: none;
+      font-size: 0.85rem; transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--warm); }
+    .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.25); }
+
+    @media (max-width: 620px) {
+      nav { padding: 1rem 4%; }
+      footer { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">Top <span>Kuhinja</span></a>
+  <a class="nav-back" href="index.html">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Nazaj na glavno stran
+  </a>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <span class="section-tag">Pravne informacije</span>
+  <h1>Pogoji uporabe</h1>
+  <p>Zadnja posodobitev: april 2026</p>
+</div>
+
+<!-- CONTENT -->
+<div class="policy-wrap">
+
+  <div class="policy-section">
+    <h2>1. Splošne določbe</h2>
+    <p>Dobrodošli na spletni strani <strong>top-kuhinja.eu</strong> (v nadaljevanju: spletna stran), ki jo upravlja:</p>
+    <div class="info-box">
+      <p><strong>Top Kuhinja</strong><br>
+      Partizanski trg 21, 8330 Metlika, Slovenija<br>
+      E-pošta: <strong>info@top-kuhinja.eu</strong><br>
+      Telefon: <strong>+386 70 610 343</strong></p>
+    </div>
+    <p>Z dostopom do spletne strani in njeno uporabo potrjujete, da ste prebrali, razumeli in sprejeli te pogoje uporabe. Če se s pogoji ne strinjate, vas prosimo, da spletne strani ne uporabljate.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>2. Namen spletne strani</h2>
+    <p>Spletna stran služi izključno informativnim in tržnim namenom — za predstavitev storitev in izdelkov podjetja Top Kuhinja ter omogočanje stika potencialnih strank z nami. Informacije na spletni strani ne predstavljajo zavezujoče ponudbe, temveč le splošno predstavitev.</p>
+    <p>Zavezujoča ponudba nastane šele z izrecno pisno potrditvijo s strani Top Kuhinja.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>3. Intelektualna lastnina</h2>
+    <p>Vsa vsebina na spletni strani — vključno z besedili, fotografijami, grafikami, logotipi, oblikovanjem in kodo — je last podjetja Top Kuhinja ali je uporabljena z ustreznim dovoljenjem.</p>
+    <p>Brez predhodnega pisnega soglasja Top Kuhinja je prepovedano:</p>
+    <ul>
+      <li>Reproduciranje, kopiranje ali distribucija vsebine spletne strani</li>
+      <li>Komercialna uporaba katerega koli dela spletne strani</li>
+      <li>Sprememba ali izpeljava del na podlagi vsebine spletne strani</li>
+    </ul>
+    <p>Fotografije referenc so last podjetja Top Kuhinja in prikazujejo dejanske izvedene projekte. Vsaka nepooblaščena uporaba teh fotografij je prepovedana.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>4. Točnost informacij</h2>
+    <p>Trudimo se, da so vse informacije na spletni strani točne in ažurne. Kljub temu ne prevzemamo odgovornosti za morebitne napake, netočnosti ali zastarele informacije.</p>
+    <p>Cene, dimenzije modelov in specifikacije, navedene na spletni strani, so okvirne in se lahko spremenijo. Točno in zavezujočo ponudbo prejmete po oddaji povpraševanja prek kontaktnega obrazca.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>5. Kontaktni obrazec in komunikacija</h2>
+    <p>Prek kontaktnega obrazca na spletni strani nam posredujete vaše podatke z namenom pridobitve ponudbe ali informacij. Z oddajo obrazca:</p>
+    <ul>
+      <li>Soglašate z obdelavo vaših osebnih podatkov v skladu z našo <a href="privacy-policy.html" style="color: var(--green);">Politiko zasebnosti</a></li>
+      <li>Potrjujete, da so posredovani podatki točni in resnični</li>
+      <li>Se strinjate, da vas kontaktiramo na navedene kontaktne podatke</li>
+    </ul>
+    <p>Oddaja obrazca ne pomeni sklenitve pogodbe in ne ustvarja zavezujočih obveznosti za nobeno od strank.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>6. Omejitev odgovornosti</h2>
+    <p>Top Kuhinja ne prevzema odgovornosti za:</p>
+    <ul>
+      <li>Začasno nedostopnost ali motnje v delovanju spletne strani</li>
+      <li>Morebitno škodo, nastalo zaradi uporabe ali nezmožnosti uporabe spletne strani</li>
+      <li>Vsebino zunanjih spletnih strani, do katerih vodijo povezave s te strani</li>
+      <li>Tehnične napake, viruse ali druge škodljive komponente, ki bi jih tretje osebe morebitno vnesle na spletno stran</li>
+    </ul>
+    <p>Spletna stran se zagotavlja v stanju »kot je«, brez kakršnih koli izrecnih ali implicitnih jamstev glede ustreznosti za določen namen.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>7. Zunanje povezave</h2>
+    <p>Spletna stran lahko vsebuje povezave do zunanjih spletnih strani (npr. Instagram, Facebook, WhatsApp). Te strani niso pod nadzorom Top Kuhinja in ne prevzemamo odgovornosti za njihovo vsebino, politike zasebnosti ali delovanje. Obiščete jih na lastno odgovornost.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>8. Dostopnost spletne strani</h2>
+    <p>Top Kuhinja si pridržuje pravico do:</p>
+    <ul>
+      <li>Začasne ali trajne prekinitve delovanja spletne strani brez predhodnega obvestila</li>
+      <li>Spremembe vsebine, strukture ali funkcionalnosti spletne strani</li>
+      <li>Omejitve dostopa do posameznih delov spletne strani</li>
+    </ul>
+  </div>
+
+  <div class="policy-section">
+    <h2>9. Spremembe pogojev uporabe</h2>
+    <p>Te pogoje uporabe lahko kadar koli spremenimo. Posodobljena različica začne veljati z objavo na tej strani. Datum zadnje posodobitve je naveden na vrhu te strani. Nadaljnja uporaba spletne strani po objavi sprememb pomeni sprejetje posodobljenih pogojev.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>10. Veljavno pravo in reševanje sporov</h2>
+    <p>Za razlago in uporabo teh pogojev uporabe se uporablja pravo <strong>Republike Slovenije</strong>. Za reševanje morebitnih sporov je pristojno sodišče v Novem Mestu.</p>
+    <p>Pred morebitnim sodnim postopkom si prizadevamo spore rešiti sporazumno. Za izvensodno reševanje sporov se lahko obrnete na nas na: <a href="mailto:info@top-kuhinja.eu" style="color: var(--green);">info@top-kuhinja.eu</a>.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>11. Kontakt</h2>
+    <p>Za vsa vprašanja v zvezi s temi pogoji uporabe nas kontaktirajte:</p>
+    <div class="info-box">
+      <p>
+        <strong>Top Kuhinja</strong><br>
+        Partizanski trg 21, 8330 Metlika<br>
+        E-pošta: <a href="mailto:info@top-kuhinja.eu" style="color: var(--green);">info@top-kuhinja.eu</a><br>
+        Telefon: <a href="tel:+38670610343" style="color: var(--green);">+386 70 610 343</a>
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <a class="footer-logo" href="index.html">Top <span>Kuhinja</span></a>
+  <div class="footer-links">
+    <a href="index.html">Domov</a>
+    <a href="index.html#contact">Kontakt</a>
+    <a href="privacy-policy.html">Politika zasebnosti</a>
+    <a href="terms.html">Pogoji uporabe</a>
+  </div>
+  <span class="footer-copy">© 2026 top-kuhinja.eu</span>
+</footer>
+
+<script>
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.style.boxShadow = window.scrollY > 40 ? '0 2px 20px rgba(61,43,31,0.12)' : '0 2px 20px rgba(61,43,31,0.08)';
+  });
+</script>
+</body>
+</html>

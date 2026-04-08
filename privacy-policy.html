@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politika zasebnosti – Top Kuhinja</title>
+  <meta name="description" content="Politika zasebnosti spletne strani Top Kuhinja. Informacije o zbiranju, obdelavi in varstvu osebnih podatkov v skladu z GDPR." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://top-kuhinja.eu/privacy-policy.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; font-synthesis: none; }
+
+    :root {
+      --cream:   #f8f4ee;
+      --sand:    #e8dcc8;
+      --warm:    #c4a882;
+      --oak:     #8b6445;
+      --espresso:#3d2b1f;
+      --green:   #5a6e4a;
+      --white:   #ffffff;
+      --text:    #2e2018;
+      --muted:   #7a6555;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--text); line-height: 1.7; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.1rem 5%;
+      background: rgba(248, 244, 238, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(196, 168, 130, 0.3);
+      box-shadow: 0 2px 20px rgba(61,43,31,0.08);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; font-weight: 700;
+      color: var(--espresso); text-decoration: none;
+      letter-spacing: 0.5px;
+    }
+    .nav-logo span { color: var(--green); }
+    .nav-back {
+      text-decoration: none; color: var(--muted);
+      font-size: 0.9rem; letter-spacing: 0.5px;
+      display: flex; align-items: center; gap: 0.4rem;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--oak); }
+    .nav-back svg { stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; width: 16px; height: 16px; }
+
+    /* PAGE HEADER */
+    .page-header {
+      background: var(--espresso);
+      padding: 8rem 5% 4rem;
+      text-align: center;
+    }
+    .page-header .section-tag {
+      display: inline-block;
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 2.5px; text-transform: uppercase;
+      color: var(--warm); margin-bottom: 1rem;
+    }
+    .page-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--white); line-height: 1.2;
+      margin-bottom: 0.8rem;
+    }
+    .page-header p {
+      color: rgba(255,255,255,0.55);
+      font-size: 0.9rem; font-weight: 300;
+    }
+
+    /* CONTENT */
+    .policy-wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 5rem 5%;
+    }
+
+    .policy-section { margin-bottom: 3rem; }
+
+    .policy-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; color: var(--espresso);
+      margin-bottom: 1rem; line-height: 1.3;
+      padding-bottom: 0.6rem;
+      border-bottom: 2px solid var(--sand);
+    }
+
+    .policy-section p {
+      color: var(--muted); margin-bottom: 0.9rem;
+      font-weight: 300; font-size: 0.97rem;
+    }
+
+    .policy-section ul {
+      list-style: none; margin: 0.5rem 0 1rem 0;
+      display: flex; flex-direction: column; gap: 0.5rem;
+    }
+    .policy-section ul li {
+      color: var(--muted); font-size: 0.97rem; font-weight: 300;
+      padding-left: 1.4rem; position: relative;
+    }
+    .policy-section ul li::before {
+      content: '–';
+      position: absolute; left: 0;
+      color: var(--warm); font-weight: 700;
+    }
+
+    .policy-section strong { color: var(--espresso); font-weight: 700; }
+
+    .info-box {
+      background: var(--white);
+      border: 1px solid var(--sand);
+      border-left: 4px solid var(--green);
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 1rem 0;
+    }
+    .info-box p { margin: 0; }
+
+    /* FOOTER */
+    footer {
+      background: var(--espresso);
+      padding: 2.5rem 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem; font-weight: 700;
+      color: var(--warm); text-decoration: none;
+    }
+    .footer-logo span { color: var(--sand); }
+    .footer-links {
+      display: flex; align-items: center; gap: 1.8rem; flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.45); text-decoration: none;
+      font-size: 0.85rem; transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--warm); }
+    .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.25); }
+
+    @media (max-width: 620px) {
+      nav { padding: 1rem 4%; }
+      footer { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">Top <span>Kuhinja</span></a>
+  <a class="nav-back" href="index.html">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Nazaj na glavno stran
+  </a>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <span class="section-tag">Pravne informacije</span>
+  <h1>Politika zasebnosti</h1>
+  <p>Zadnja posodobitev: april 2026</p>
+</div>
+
+<!-- CONTENT -->
+<div class="policy-wrap">
+
+  <div class="policy-section">
+    <h2>1. Upravljavec osebnih podatkov</h2>
+    <p>Upravljavec osebnih podatkov, zbranih prek te spletne strani, je:</p>
+    <div class="info-box">
+      <p><strong>Top Kuhinja</strong><br>
+      Partizanski trg 21, 8330 Metlika, Slovenija<br>
+      E-pošta: <strong>info@top-kuhinja.eu</strong><br>
+      Telefon: <strong>+386 70 610 343</strong></p>
+    </div>
+  </div>
+
+  <div class="policy-section">
+    <h2>2. Katere podatke zbiramo</h2>
+    <p>Podatke zbiramo izključno, kadar nam jih sami posredujete — prek kontaktnega obrazca na spletni strani. Ti podatki vključujejo:</p>
+    <ul>
+      <li>Ime in priimek</li>
+      <li>E-poštni naslov</li>
+      <li>Telefonska številka (neobvezno)</li>
+      <li>Vsebina sporočila oziroma opis projekta</li>
+      <li>Izbira modela kuhinje, ki vas zanima</li>
+    </ul>
+    <p>Poleg tega naša spletna stran pri nalaganju samodejno prejme tehnične podatke (IP naslov, vrsta brskalnika, čas obiska), ki jih upravljamo zgolj za zagotavljanje delovanja strani in varnosti.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>3. Namen in pravna podlaga obdelave</h2>
+    <p>Vaše osebne podatke obdelujemo izključno za naslednje namene:</p>
+    <ul>
+      <li><strong>Odgovor na vaše povpraševanje</strong> — da se lahko povežemo z vami in vam pošljemo ponudbo ali odgovorimo na vprašanja (pravna podlaga: vaše soglasje ob oddaji obrazca)</li>
+      <li><strong>Priprava in pošiljanje ponudbe</strong> — za izvedbo korakov pred sklenitvijo pogodbe (pravna podlaga: zakoniti interes oziroma predpogodbenorazmerje)</li>
+      <li><strong>Varnost in delovanje spletne strani</strong> — tehnični podatki za zaznavanje napak in preprečevanje zlorab (pravna podlaga: zakoniti interes)</li>
+    </ul>
+    <p>Vaših podatkov ne prodajamo, ne posredujemo tretjim osebam v tržne namene in jih ne obdelujemo za noben drug namen, kot je navedeno zgoraj.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>4. Hramba podatkov</h2>
+    <p>Vaše podatke hranimo le toliko časa, kolikor je potrebno za uresničitev namena, za katerega so bili zbrani:</p>
+    <ul>
+      <li>Podatki iz kontaktnega obrazca se hranijo do <strong>2 leti</strong> od zadnjega stika, razen če z nami sklenete pogodbo — v tem primeru skladno z zakonskimi roki hrambe poslovne dokumentacije</li>
+      <li>Tehnični podatki (dnevniške datoteke) se hranijo največ <strong>30 dni</strong></li>
+    </ul>
+    <p>Po preteku navedenega roka podatke varno izbrišemo ali anonimiziramo.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>5. Vaše pravice (GDPR)</h2>
+    <p>Kot posameznik, na katerega se nanašajo osebni podatki, imate naslednje pravice:</p>
+    <ul>
+      <li><strong>Pravica do dostopa</strong> — zahtevate lahko kopijo osebnih podatkov, ki jih hranimo o vas</li>
+      <li><strong>Pravica do popravka</strong> — zahtevate lahko popravek netočnih ali nepopolnih podatkov</li>
+      <li><strong>Pravica do izbrisa</strong> — v določenih primerih lahko zahtevate izbris vaših podatkov</li>
+      <li><strong>Pravica do omejitve obdelave</strong> — zahtevate lahko, da začasno omejimo obdelavo vaših podatkov</li>
+      <li><strong>Pravica do ugovora</strong> — ugovarjate lahko obdelavi, ki temelji na zakonitih interesih</li>
+      <li><strong>Pravica do prenosljivosti</strong> — zahtevate lahko prenos podatkov v strojno berljivi obliki</li>
+      <li><strong>Pravica do umika soglasja</strong> — kadar koli lahko umaknete soglasje, ne da bi to vplivalo na zakonitost obdelave pred umikom</li>
+    </ul>
+    <p>Svojo pravico uveljavljate z zahtevo, poslano na: <strong>info@top-kuhinja.eu</strong>. Odgovorimo v roku 30 dni.</p>
+    <p>Če menite, da vaših pravic ne spoštujemo, imate pravico vložiti pritožbo pri nadzornem organu — <strong>Informacijskem pooblaščencu Republike Slovenije</strong> (<a href="https://www.ip-rs.si" target="_blank" rel="noopener" style="color: var(--green);">www.ip-rs.si</a>).</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>6. Piškotki</h2>
+    <p>Naša spletna stran trenutno ne uporablja sledilnih ali analitičnih piškotkov tretjih oseb. Spletna stran lahko shrani tehnične piškotke, nujne za delovanje (npr. seja brskalnika), ki ne zbirajo osebnih podatkov.</p>
+    <p>Ob morebitni uvedbi analitičnih orodij (npr. Google Analytics) bomo to politiko ustrezno posodobili in pridobili vaše soglasje.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>7. Storitve tretjih oseb</h2>
+    <p>Spletna stran za delovanje uporablja naslednje zunanje storitve:</p>
+    <ul>
+      <li><strong>Google Fonts</strong> — za nalaganje pisav; Google pri tem prejme vaš IP naslov. Več o zasebnosti: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color: var(--green);">policies.google.com/privacy</a></li>
+      <li><strong>Netlify</strong> — gostovanje spletne strani in obdelava kontaktnih obrazcev. Zasebnostna politika: <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener" style="color: var(--green);">netlify.com/privacy</a></li>
+      <li><strong>WhatsApp (Meta)</strong> — gumb za neposreden kontakt prek WhatsApp. Ob kliku na gumb zapustite našo stran in stopite v stik prek platforme Meta. Zasebnostna politika: <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener" style="color: var(--green);">whatsapp.com/legal/privacy-policy</a></li>
+    </ul>
+  </div>
+
+  <div class="policy-section">
+    <h2>8. Varnost podatkov</h2>
+    <p>Spletna stran deluje prek HTTPS protokola (šifrirana povezava). Vaši podatki se prenašajo varno in niso dostopni nepooblaščenim osebam med prenosom. Podatke hranimo v varnih sistemih z omejenim dostopom.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>9. Spremembe politike zasebnosti</h2>
+    <p>To politiko zasebnosti lahko kadar koli posodobimo. Datum zadnje posodobitve je naveden na vrhu te strani. Priporočamo, da stran občasno preverite.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>10. Kontakt</h2>
+    <p>Za vsa vprašanja v zvezi z zasebnostjo in varstvom osebnih podatkov nas kontaktirajte:</p>
+    <div class="info-box">
+      <p>
+        <strong>Top Kuhinja</strong><br>
+        Partizanski trg 21, 8330 Metlika<br>
+        E-pošta: <a href="mailto:info@top-kuhinja.eu" style="color: var(--green);">info@top-kuhinja.eu</a><br>
+        Telefon: <a href="tel:+38670610343" style="color: var(--green);">+386 70 610 343</a>
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <a class="footer-logo" href="index.html">Top <span>Kuhinja</span></a>
+  <div class="footer-links">
+    <a href="index.html">Domov</a>
+    <a href="index.html#contact">Kontakt</a>
+    <a href="privacy-policy.html">Politika zasebnosti</a>
+    <a href="terms.html">Pogoji uporabe</a>
+  </div>
+  <span class="footer-copy">© 2026 top-kuhinja.eu</span>
+</footer>
+
+<script>
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.style.boxShadow = window.scrollY > 40 ? '0 2px 20px rgba(61,43,31,0.12)' : '0 2px 20px rgba(61,43,31,0.08)';
+  });
+</script>
+</body>
+</html>
