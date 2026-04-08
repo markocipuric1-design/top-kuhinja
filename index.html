@@ -30,7 +30,7 @@
       line-height: 1.7;
     }
 
-    /* ── NAV ── */
+    /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
@@ -41,7 +41,6 @@
       transition: box-shadow 0.3s;
     }
     nav.scrolled { box-shadow: 0 2px 20px rgba(61,43,31,0.12); }
-
     .nav-logo {
       font-family: 'Playfair Display', serif;
       font-size: 1.5rem; font-weight: 700;
@@ -49,7 +48,6 @@
       letter-spacing: 0.5px;
     }
     .nav-logo span { color: var(--green); }
-
     .nav-links { display: flex; gap: 2rem; list-style: none; }
     .nav-links a {
       text-decoration: none; color: var(--muted);
@@ -57,7 +55,6 @@
       transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--oak); }
-
     .nav-cta {
       background: var(--green); color: var(--white) !important;
       padding: 0.5rem 1.3rem; border-radius: 30px;
@@ -65,7 +62,7 @@
     }
     .nav-cta:hover { background: var(--oak) !important; }
 
-    /* ── HERO ── */
+    /* HERO */
     .hero {
       min-height: 100vh;
       display: flex; align-items: center;
@@ -107,7 +104,6 @@
       font-weight: 300;
     }
     .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
-
     .btn-primary {
       display: inline-block;
       background: var(--espresso); color: var(--white);
@@ -116,7 +112,6 @@
       letter-spacing: 0.3px; transition: background 0.25s, transform 0.2s;
     }
     .btn-primary:hover { background: var(--oak); transform: translateY(-2px); }
-
     .btn-secondary {
       display: inline-block;
       border: 2px solid var(--warm); color: var(--espresso);
@@ -126,24 +121,21 @@
     }
     .btn-secondary:hover { background: var(--sand); transform: translateY(-2px); }
 
-    /* ── STATS BAR ── */
+    /* STATS */
     .stats-bar {
       background: var(--espresso);
       display: flex; justify-content: space-around; flex-wrap: wrap;
-      padding: 2.5rem 5%;
-      gap: 1.5rem;
+      padding: 2.5rem 5%; gap: 1.5rem;
     }
     .stat { text-align: center; }
     .stat-number {
       font-family: 'Playfair Display', serif;
-      font-size: 2.4rem; color: var(--warm);
-      font-weight: 700;
+      font-size: 2.4rem; color: var(--warm); font-weight: 700;
     }
     .stat-label { font-size: 0.85rem; color: rgba(255,255,255,0.6); letter-spacing: 0.5px; }
 
-    /* ── SECTIONS ── */
+    /* SECTIONS */
     section { padding: 6rem 5%; }
-
     .section-tag {
       display: inline-block;
       font-size: 0.75rem; font-weight: 700;
@@ -157,17 +149,10 @@
     }
     .subtitle { color: var(--muted); max-width: 520px; font-size: 1.05rem; font-weight: 300; }
 
-    /* ── ABOUT ── */
+    /* ABOUT */
     .about { background: var(--white); }
-    .about-grid {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 5rem; align-items: center; margin-top: 3rem;
-    }
-    .about-image {
-      border-radius: 20px; overflow: hidden;
-      box-shadow: 0 20px 60px rgba(61,43,31,0.15);
-      position: relative;
-    }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; margin-top: 3rem; }
+    .about-image { border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(61,43,31,0.15); position: relative; }
     .about-image img { width: 100%; display: block; }
     .about-badge {
       position: absolute; bottom: -20px; right: -20px;
@@ -178,99 +163,62 @@
     }
     .about-badge strong { font-size: 1.8rem; display: block; }
     .about-badge span { font-size: 0.8rem; opacity: 0.85; }
-
     .about-text { padding-right: 1rem; }
     .about-text p { color: var(--muted); margin-bottom: 1.2rem; }
     .about-perks { display: flex; flex-direction: column; gap: 0.8rem; margin: 1.8rem 0 2rem; }
     .perk { display: flex; align-items: center; gap: 0.8rem; font-weight: 400; }
     .perk-icon { width: 28px; height: 28px; background: var(--sand); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; flex-shrink: 0; }
 
-    /* ── COLLECTIONS ── */
+    /* COLLECTIONS */
     .collections { background: var(--cream); }
     .collections-header { max-width: 560px; margin-bottom: 3.5rem; }
-    .cards-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 1.8rem;
-    }
-    .card {
-      background: var(--white); border-radius: 16px; overflow: hidden;
-      box-shadow: 0 4px 20px rgba(61,43,31,0.07);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+    .cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; }
+    .card { background: var(--white); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(61,43,31,0.07); transition: transform 0.3s, box-shadow 0.3s; }
     .card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(61,43,31,0.13); }
     .card-img { position: relative; overflow: hidden; height: 220px; }
     .card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
     .card:hover .card-img img { transform: scale(1.06); }
-    .card-label {
-      position: absolute; top: 14px; left: 14px;
-      background: var(--white); color: var(--oak);
-      font-size: 0.72rem; font-weight: 700; letter-spacing: 1px;
-      text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 20px;
-    }
+    .card-label { position: absolute; top: 14px; left: 14px; background: var(--white); color: var(--oak); font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 20px; }
     .card-body { padding: 1.5rem; }
-    .card-body h3 {
-      font-family: 'Playfair Display', serif; font-size: 1.25rem;
-      color: var(--espresso); margin-bottom: 0.5rem;
-    }
+    .card-body h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: var(--espresso); margin-bottom: 0.5rem; }
     .card-body p { font-size: 0.9rem; color: var(--muted); font-weight: 300; }
-    .card-link {
-      display: inline-block; margin-top: 1rem;
-      color: var(--green); font-weight: 700; font-size: 0.88rem;
-      text-decoration: none; letter-spacing: 0.3px;
-      border-bottom: 2px solid transparent; transition: border-color 0.2s;
-    }
+    .card-link { display: inline-block; margin-top: 1rem; color: var(--green); font-weight: 700; font-size: 0.88rem; text-decoration: none; letter-spacing: 0.3px; border-bottom: 2px solid transparent; transition: border-color 0.2s; }
     .card-link:hover { border-color: var(--green); }
 
-    /* ── PROCESS ── */
+    /* PROCESS */
     .process { background: var(--espresso); color: var(--white); text-align: center; }
     .process h2 { color: var(--warm); }
     .process .subtitle { color: rgba(255,255,255,0.6); margin: 0 auto 3.5rem; }
     .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
     .step { padding: 2rem 1.2rem; }
-    .step-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.5rem; color: var(--warm); opacity: 0.3;
-      line-height: 1; margin-bottom: 0.8rem;
-    }
+    .step-num { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: var(--warm); opacity: 0.3; line-height: 1; margin-bottom: 0.8rem; }
     .step h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin-bottom: 0.6rem; color: var(--sand); }
     .step p { font-size: 0.9rem; color: rgba(255,255,255,0.55); font-weight: 300; }
 
-    /* ── FEATURES ── */
+    /* FEATURES */
     .features { background: var(--white); }
     .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin-top: 3.5rem; }
-    .feature-card {
-      padding: 2rem; border-radius: 16px;
-      background: var(--cream); border: 1px solid var(--sand);
-    }
+    .feature-card { padding: 2rem; border-radius: 16px; background: var(--cream); border: 1px solid var(--sand); }
     .feature-icon { font-size: 2rem; margin-bottom: 1rem; }
     .feature-card h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--espresso); margin-bottom: 0.5rem; }
     .feature-card p { font-size: 0.9rem; color: var(--muted); font-weight: 300; }
 
-    /* ── TESTIMONIALS ── */
+    /* TESTIMONIALS */
     .testimonials { background: var(--sand); }
     .testimonials-header { text-align: center; margin-bottom: 3.5rem; }
     .testimonials-header .subtitle { margin: 0 auto; }
     .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; }
-    .review {
-      background: var(--white); border-radius: 16px; padding: 2rem;
-      box-shadow: 0 4px 20px rgba(61,43,31,0.07);
-    }
+    .review { background: var(--white); border-radius: 16px; padding: 2rem; box-shadow: 0 4px 20px rgba(61,43,31,0.07); }
     .stars { color: #d4a017; font-size: 1.1rem; margin-bottom: 1rem; }
     .review p { font-size: 0.95rem; color: var(--muted); font-style: italic; font-weight: 300; line-height: 1.8; }
     .reviewer { display: flex; align-items: center; gap: 0.8rem; margin-top: 1.5rem; }
-    .reviewer-avatar {
-      width: 44px; height: 44px; border-radius: 50%;
-      background: var(--warm); display: flex; align-items: center; justify-content: center;
-      font-weight: 700; color: var(--white); font-size: 1rem; flex-shrink: 0;
-    }
+    .reviewer-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--warm); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--white); font-size: 1rem; flex-shrink: 0; }
     .reviewer-name { font-weight: 700; color: var(--espresso); font-size: 0.9rem; }
     .reviewer-loc { font-size: 0.78rem; color: var(--muted); }
 
-    /* ── CTA ── */
+    /* CTA */
     .cta-section {
-      background:
-        linear-gradient(135deg, rgba(90,110,74,0.92) 0%, rgba(61,43,31,0.9) 100%),
-        url('https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=1200&q=80') center/cover no-repeat;
+      background: linear-gradient(135deg, rgba(90,110,74,0.92) 0%, rgba(61,43,31,0.9) 100%), url('https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=1200&q=80') center/cover no-repeat;
       text-align: center; padding: 7rem 5%;
     }
     .cta-section h2 { color: var(--white); font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 1rem; }
@@ -278,7 +226,7 @@
     .cta-section .btn-primary { background: var(--warm); }
     .cta-section .btn-primary:hover { background: var(--sand); color: var(--espresso); }
 
-    /* ── CONTACT ── */
+    /* CONTACT */
     .contact { background: var(--cream); }
     .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; margin-top: 3rem; align-items: start; }
     .contact-info p { color: var(--muted); margin-bottom: 2rem; font-weight: 300; }
@@ -288,6 +236,7 @@
     .contact-item-text strong { display: block; color: var(--espresso); font-size: 0.85rem; font-weight: 700; }
     .contact-item-text span { color: var(--muted); font-size: 0.9rem; }
 
+    /* FORM */
     .contact-form { display: flex; flex-direction: column; gap: 1rem; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
@@ -313,11 +262,28 @@
     }
     .form-submit:hover { background: var(--oak); transform: translateY(-2px); }
 
-    /* ── FOOTER ── */
-    footer {
-      background: var(--espresso); color: rgba(255,255,255,0.6);
-      padding: 4rem 5% 2rem;
+    /* SUCCESS MESSAGE */
+    .form-success {
+      display: none;
+      background: var(--green); color: var(--white);
+      padding: 1.2rem 1.8rem; border-radius: 10px;
+      font-weight: 700; text-align: center;
+      margin-top: 1rem;
     }
+
+    /* WHATSAPP */
+    .whatsapp-btn {
+      position: fixed; bottom: 2rem; right: 2rem; z-index: 500;
+      width: 58px; height: 58px; border-radius: 50%;
+      background: #25D366; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      text-decoration: none; transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .whatsapp-btn:hover { transform: scale(1.1); box-shadow: 0 8px 30px rgba(37,211,102,0.5); }
+    .whatsapp-btn svg { width: 30px; height: 30px; fill: white; }
+
+    /* FOOTER */
+    footer { background: var(--espresso); color: rgba(255,255,255,0.6); padding: 4rem 5% 2rem; }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
     .footer-brand .nav-logo { color: var(--warm); font-size: 1.7rem; display: block; margin-bottom: 1rem; }
     .footer-brand p { font-size: 0.9rem; line-height: 1.7; max-width: 240px; }
@@ -329,7 +295,7 @@
     .footer-bottom span { font-size: 0.82rem; }
     .footer-bottom a { color: var(--warm); text-decoration: none; }
 
-    /* ── RESPONSIVE ── */
+    /* RESPONSIVE */
     @media (max-width: 900px) {
       .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
       .cards-grid, .features-grid, .reviews-grid { grid-template-columns: 1fr 1fr; }
@@ -337,7 +303,6 @@
       .footer-grid { grid-template-columns: 1fr 1fr; }
       .about-badge { bottom: 10px; right: 10px; }
     }
-
     @media (max-width: 620px) {
       nav { padding: 1rem 4%; }
       .nav-links { display: none; }
@@ -381,22 +346,10 @@
 
 <!-- STATS BAR -->
 <div class="stats-bar">
-  <div class="stat">
-    <div class="stat-number">1,200+</div>
-    <div class="stat-label">Kitchens Delivered</div>
-  </div>
-  <div class="stat">
-    <div class="stat-number">15+</div>
-    <div class="stat-label">Years of Experience</div>
-  </div>
-  <div class="stat">
-    <div class="stat-number">98%</div>
-    <div class="stat-label">Customer Satisfaction</div>
-  </div>
-  <div class="stat">
-    <div class="stat-number">5 yr</div>
-    <div class="stat-label">Warranty Included</div>
-  </div>
+  <div class="stat"><div class="stat-number">1,200+</div><div class="stat-label">Kitchens Delivered</div></div>
+  <div class="stat"><div class="stat-number">15+</div><div class="stat-label">Years of Experience</div></div>
+  <div class="stat"><div class="stat-number">98%</div><div class="stat-label">Customer Satisfaction</div></div>
+  <div class="stat"><div class="stat-number">5 yr</div><div class="stat-label">Warranty Included</div></div>
 </div>
 
 <!-- ABOUT -->
@@ -404,10 +357,7 @@
   <div class="about-grid">
     <div class="about-image">
       <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80" alt="Warm kitchen interior" />
-      <div class="about-badge">
-        <strong>15+</strong>
-        <span>Years crafting kitchens</span>
-      </div>
+      <div class="about-badge"><strong>15+</strong><span>Years crafting kitchens</span></div>
     </div>
     <div class="about-text">
       <span class="section-tag">Our Story</span>
@@ -434,70 +384,28 @@
   </div>
   <div class="cards-grid">
     <div class="card">
-      <div class="card-img">
-        <span class="card-label">Bestseller</span>
-        <img src="https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=600&q=80" alt="Natural Oak kitchen" />
-      </div>
-      <div class="card-body">
-        <h3>Natural Oak</h3>
-        <p>Warm honey tones and visible wood grain bring organic beauty to your everyday cooking space.</p>
-        <a href="#contact" class="card-link">View Details →</a>
-      </div>
+      <div class="card-img"><span class="card-label">Bestseller</span><img src="https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=600&q=80" alt="Natural Oak kitchen" /></div>
+      <div class="card-body"><h3>Natural Oak</h3><p>Warm honey tones and visible wood grain bring organic beauty to your everyday cooking space.</p><a href="#contact" class="card-link">View Details →</a></div>
     </div>
     <div class="card">
-      <div class="card-img">
-        <span class="card-label">New 2024</span>
-        <img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=600&q=80" alt="Nordic White kitchen" />
-      </div>
-      <div class="card-body">
-        <h3>Nordic White</h3>
-        <p>Clean, airy lines paired with natural textures for a light and timeless Scandinavian aesthetic.</p>
-        <a href="#contact" class="card-link">View Details →</a>
-      </div>
+      <div class="card-img"><span class="card-label">New 2025</span><img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=600&q=80" alt="Nordic White kitchen" /></div>
+      <div class="card-body"><h3>Nordic White</h3><p>Clean, airy lines paired with natural textures for a light and timeless Scandinavian aesthetic.</p><a href="#contact" class="card-link">View Details →</a></div>
     </div>
     <div class="card">
-      <div class="card-img">
-        <span class="card-label">Premium</span>
-        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80" alt="Dark Walnut kitchen" />
-      </div>
-      <div class="card-body">
-        <h3>Dark Walnut</h3>
-        <p>Rich, deep tones with a sophisticated finish — for those who want a kitchen as bold as their taste.</p>
-        <a href="#contact" class="card-link">View Details →</a>
-      </div>
+      <div class="card-img"><span class="card-label">Premium</span><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80" alt="Dark Walnut kitchen" /></div>
+      <div class="card-body"><h3>Dark Walnut</h3><p>Rich, deep tones with a sophisticated finish — for those who want a kitchen as bold as their taste.</p><a href="#contact" class="card-link">View Details →</a></div>
     </div>
     <div class="card">
-      <div class="card-img">
-        <span class="card-label">Classic</span>
-        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Country House kitchen" />
-      </div>
-      <div class="card-body">
-        <h3>Country House</h3>
-        <p>Shaker-style cabinet doors and hand-painted finishes evoke the timeless warmth of countryside living.</p>
-        <a href="#contact" class="card-link">View Details →</a>
-      </div>
+      <div class="card-img"><span class="card-label">Classic</span><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Country House kitchen" /></div>
+      <div class="card-body"><h3>Country House</h3><p>Shaker-style cabinet doors and hand-painted finishes evoke the timeless warmth of countryside living.</p><a href="#contact" class="card-link">View Details →</a></div>
     </div>
     <div class="card">
-      <div class="card-img">
-        <span class="card-label">Trending</span>
-        <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=600&q=80" alt="Sage Green kitchen" />
-      </div>
-      <div class="card-body">
-        <h3>Sage Green</h3>
-        <p>Nature-inspired hues blended with matte textures — a calming, stylish take on modern kitchens.</p>
-        <a href="#contact" class="card-link">View Details →</a>
-      </div>
+      <div class="card-img"><span class="card-label">Trending</span><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=600&q=80" alt="Sage Green kitchen" /></div>
+      <div class="card-body"><h3>Sage Green</h3><p>Nature-inspired hues blended with matte textures — a calming, stylish take on modern kitchens.</p><a href="#contact" class="card-link">View Details →</a></div>
     </div>
     <div class="card">
-      <div class="card-img">
-        <span class="card-label">Bespoke</span>
-        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80" alt="Custom Design kitchen" />
-      </div>
-      <div class="card-body">
-        <h3>Fully Custom</h3>
-        <p>Your vision, our craft. Work directly with our designers to build the kitchen you've always imagined.</p>
-        <a href="#contact" class="card-link">Enquire Now →</a>
-      </div>
+      <div class="card-img"><span class="card-label">Bespoke</span><img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80" alt="Custom Design kitchen" /></div>
+      <div class="card-body"><h3>Fully Custom</h3><p>Your vision, our craft. Work directly with our designers to build the kitchen you've always imagined.</p><a href="#contact" class="card-link">Enquire Now →</a></div>
     </div>
   </div>
 </section>
@@ -508,26 +416,10 @@
   <h2>From Dream to Done in 4 Steps</h2>
   <p class="subtitle">We make the journey from first sketch to final installation smooth, transparent, and enjoyable.</p>
   <div class="steps">
-    <div class="step">
-      <div class="step-num">01</div>
-      <h3>Free Consultation</h3>
-      <p>We visit your home, measure the space, and understand your lifestyle, needs, and budget.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">02</div>
-      <h3>Design & Quote</h3>
-      <p>Our designers create 3D visualisations and a detailed quote — no surprises, no hidden costs.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">03</div>
-      <h3>Crafting</h3>
-      <p>Your kitchen is built in our workshop using premium materials and quality-checked at every stage.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">04</div>
-      <h3>Installation</h3>
-      <p>Our expert team installs everything cleanly and precisely, leaving you with a perfect kitchen.</p>
-    </div>
+    <div class="step"><div class="step-num">01</div><h3>Free Consultation</h3><p>We visit your home, measure the space, and understand your lifestyle, needs, and budget.</p></div>
+    <div class="step"><div class="step-num">02</div><h3>Design & Quote</h3><p>Our designers create 3D visualisations and a detailed quote — no surprises, no hidden costs.</p></div>
+    <div class="step"><div class="step-num">03</div><h3>Crafting</h3><p>Your kitchen is built in our workshop using premium materials and quality-checked at every stage.</p></div>
+    <div class="step"><div class="step-num">04</div><h3>Installation</h3><p>Our expert team installs everything cleanly and precisely, leaving you with a perfect kitchen.</p></div>
   </div>
 </section>
 
@@ -536,36 +428,12 @@
   <span class="section-tag">Why Choose Us</span>
   <h2>Quality You Can Feel at Every Touch</h2>
   <div class="features-grid">
-    <div class="feature-card">
-      <div class="feature-icon">🌳</div>
-      <h3>Natural Materials</h3>
-      <p>We use only certified, sustainably sourced wood and eco-friendly finishes — beautiful and responsible.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">📐</div>
-      <h3>Precision Craftsmanship</h3>
-      <p>Every door, drawer, and joint is hand-finished to exact tolerances by our experienced craftsmen.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🎨</div>
-      <h3>Unlimited Colours</h3>
-      <p>Choose from 200+ RAL colours and wood stains to match any interior — or bring your own swatch.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🔇</div>
-      <h3>Soft-Close Hardware</h3>
-      <p>All cabinets include premium Blum hinges and drawer systems — silent, smooth, built to last decades.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">📏</div>
-      <h3>Made-to-Measure</h3>
-      <p>No standard sizes — every kitchen is custom-built to fit your exact space down to the millimetre.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🛡️</div>
-      <h3>5-Year Warranty</h3>
-      <p>We stand behind our work. Full warranty on all materials and installation — zero compromise.</p>
-    </div>
+    <div class="feature-card"><div class="feature-icon">🌳</div><h3>Natural Materials</h3><p>We use only certified, sustainably sourced wood and eco-friendly finishes — beautiful and responsible.</p></div>
+    <div class="feature-card"><div class="feature-icon">📐</div><h3>Precision Craftsmanship</h3><p>Every door, drawer, and joint is hand-finished to exact tolerances by our experienced craftsmen.</p></div>
+    <div class="feature-card"><div class="feature-icon">🎨</div><h3>Unlimited Colours</h3><p>Choose from 200+ RAL colours and wood stains to match any interior — or bring your own swatch.</p></div>
+    <div class="feature-card"><div class="feature-icon">🔇</div><h3>Soft-Close Hardware</h3><p>All cabinets include premium Blum hinges and drawer systems — silent, smooth, built to last decades.</p></div>
+    <div class="feature-card"><div class="feature-icon">📏</div><h3>Made-to-Measure</h3><p>No standard sizes — every kitchen is custom-built to fit your exact space down to the millimetre.</p></div>
+    <div class="feature-card"><div class="feature-icon">🛡️</div><h3>5-Year Warranty</h3><p>We stand behind our work. Full warranty on all materials and installation — zero compromise.</p></div>
   </div>
 </section>
 
@@ -580,35 +448,17 @@
     <div class="review">
       <div class="stars">★★★★★</div>
       <p>"From the first consultation to the final installation, the team at Top Kuhinja was professional, creative, and truly cared about getting it right. Our kitchen is stunning."</p>
-      <div class="reviewer">
-        <div class="reviewer-avatar">MK</div>
-        <div>
-          <div class="reviewer-name">Maja Kovač</div>
-          <div class="reviewer-loc">Ljubljana, Slovenia</div>
-        </div>
-      </div>
+      <div class="reviewer"><div class="reviewer-avatar">MK</div><div><div class="reviewer-name">Maja Kovač</div><div class="reviewer-loc">Ljubljana, Slovenia</div></div></div>
     </div>
     <div class="review">
       <div class="stars">★★★★★</div>
       <p>"We renovated our entire kitchen and couldn't be happier. The quality of the materials, the attention to detail, and the warmth of the team made the whole experience wonderful."</p>
-      <div class="reviewer">
-        <div class="reviewer-avatar">TH</div>
-        <div>
-          <div class="reviewer-name">Tomislav Horvatić</div>
-          <div class="reviewer-loc">Zagreb, Croatia</div>
-        </div>
-      </div>
+      <div class="reviewer"><div class="reviewer-avatar">TH</div><div><div class="reviewer-name">Tomislav Horvatić</div><div class="reviewer-loc">Zagreb, Croatia</div></div></div>
     </div>
     <div class="review">
       <div class="stars">★★★★★</div>
       <p>"Ordered a fully custom kitchen — they worked with us every step of the way. The 3D design helped us visualise everything perfectly. Delivered on time and on budget!"</p>
-      <div class="reviewer">
-        <div class="reviewer-avatar">AN</div>
-        <div>
-          <div class="reviewer-name">Ana Novak</div>
-          <div class="reviewer-loc">Maribor, Slovenia</div>
-        </div>
-      </div>
+      <div class="reviewer"><div class="reviewer-avatar">AN</div><div><div class="reviewer-name">Ana Novak</div><div class="reviewer-loc">Maribor, Slovenia</div></div></div>
     </div>
   </div>
 </section>
@@ -633,56 +483,57 @@
       <div class="contact-details">
         <div class="contact-item">
           <div class="contact-item-icon">📍</div>
-          <div class="contact-item-text">
-            <strong>Showroom</strong>
-            <span>Visit us to see materials and samples in person</span>
-          </div>
+          <div class="contact-item-text"><strong>Showroom</strong><span>Visit us to see materials and samples in person</span></div>
         </div>
         <div class="contact-item">
           <div class="contact-item-icon">🌐</div>
-          <div class="contact-item-text">
-            <strong>Website</strong>
-            <span>top-kuhinja.eu</span>
-          </div>
+          <div class="contact-item-text"><strong>Website</strong><span>top-kuhinja.eu</span></div>
         </div>
         <div class="contact-item">
           <div class="contact-item-icon">📧</div>
-          <div class="contact-item-text">
-            <strong>Email</strong>
-            <span>info@top-kuhinja.eu</span>
-          </div>
+          <div class="contact-item-text"><strong>Email</strong><span>info@top-kuhinja.eu</span></div>
         </div>
         <div class="contact-item">
           <div class="contact-item-icon">🕐</div>
-          <div class="contact-item-text">
-            <strong>Working Hours</strong>
-            <span>Mon–Fri 8:00–17:00 · Sat 9:00–13:00</span>
-          </div>
+          <div class="contact-item-text"><strong>Working Hours</strong><span>Mon–Fri 8:00–17:00 · Sat 9:00–13:00</span></div>
         </div>
       </div>
     </div>
-    <form class="contact-form" onsubmit="handleSubmit(event)">
+
+    <!-- ✅ NETLIFY FORM - 3 changes: name, method, data-netlify + hidden field + name attributes on all inputs -->
+    <form
+      class="contact-form"
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+    >
+      <!-- Hidden fields required by Netlify -->
+      <input type="hidden" name="form-name" value="contact" />
+      <p style="display:none;"><input name="bot-field" /></p>
+
       <div class="form-row">
         <div class="form-group">
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" placeholder="Ana" required />
+          <label for="fname">Ime</label>
+          <input type="text" id="fname" name="first-name" placeholder="Ana" required />
         </div>
         <div class="form-group">
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" placeholder="Kovač" required />
+          <label for="lname">Priimek</label>
+          <input type="text" id="lname" name="last-name" placeholder="Kovač" required />
         </div>
       </div>
       <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="ana@example.com" required />
+        <label for="email">Email Naslov</label>
+        <input type="email" id="email" name="email" placeholder="ana@email.com" required />
       </div>
       <div class="form-group">
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" placeholder="+386 ..." />
+        <label for="phone">Telefinska številka</label>  
+        </label>
+        <input type="tel" id="phone" name="phone" placeholder="+386 ..." />
       </div>
       <div class="form-group">
-        <label for="interest">I'm interested in</label>
-        <select id="interest">
+        <label for="interest">Zanimam se za</label>
+        <select id="interest" name="interest">
           <option>Natural Oak Collection</option>
           <option>Nordic White Collection</option>
           <option>Dark Walnut Collection</option>
@@ -693,10 +544,11 @@
       </div>
       <div class="form-group">
         <label for="message">Tell us about your project</label>
-        <textarea id="message" placeholder="Room size, current kitchen, style preferences..."></textarea>
+        <textarea id="message" name="message" placeholder="Room size, current kitchen, style preferences..."></textarea>
       </div>
-      <button type="submit" class="form-submit">Send Enquiry</button>
+      <button type="submit" class="form-submit">Oddaj obrazec</button>
     </form>
+
   </div>
 </section>
 
@@ -737,29 +589,24 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2024 top-kuhinja.eu · All rights reserved</span>
+    <span>© 2026 top-kuhinja.eu · All rights reserved</span>
     <span><a href="#">Privacy Policy</a> · <a href="#">Terms</a></span>
   </div>
 </footer>
 
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/385912345678" class="whatsapp-btn" target="_blank" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
 <script>
-  // Nav shadow on scroll
   const nav = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 40);
   });
 
-  // Smooth form submit
-  function handleSubmit(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('.form-submit');
-    btn.textContent = 'Sent! We\'ll be in touch soon.';
-    btn.style.background = 'var(--green)';
-    btn.disabled = true;
-    e.target.reset();
-  }
-
-  // Subtle scroll-reveal
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
