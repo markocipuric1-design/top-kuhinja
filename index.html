@@ -1,9 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Top Kuhinja – Kitchens That Feel Like Home</title>
+  <title>Top Kuhinja – Kuhinje po meri po dostopni ceni | Metlika, Slovenija</title>
+  <meta name="description" content="Sanjska kuhinja ne sme biti privilegij. Top Kuhinja izdeluje kuhinje po meri za vsak proračun – brez kompromisov pri kakovosti. Brezplačna konzultacija." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://top-kuhinja.eu/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://top-kuhinja.eu/" />
+  <meta property="og:title"       content="Top Kuhinja – Kuhinje po meri po dostopni ceni" />
+  <meta property="og:description" content="Sanjska kuhinja ne sme biti privilegij. Top Kuhinja izdeluje kuhinje po meri za vsak proračun – brez kompromisov pri kakovosti." />
+  <meta property="og:image"       content="https://top-kuhinja.eu/showcase/kitchen-1.jpeg" />
+  <meta property="og:locale"      content="sl_SI" />
+  <meta property="og:site_name"   content="Top Kuhinja" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Top Kuhinja – Kuhinje po meri po dostopni ceni" />
+  <meta name="twitter:description" content="Sanjska kuhinja ne sme biti privilegij. Top Kuhinja – kuhinje po meri za vsak proračun." />
+  <meta name="twitter:image"       content="https://top-kuhinja.eu/showcase/kitchen-1.jpeg" />
+
+  <!-- JSON-LD LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Top Kuhinja",
+    "url": "https://top-kuhinja.eu",
+    "telephone": "+38670610343",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Partizanski trg 21",
+      "addressLocality": "Metlika",
+      "postalCode": "8330",
+      "addressCountry": "SI"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "09:00", "closes": "13:00" }
+    ],
+    "description": "Kuhinje po meri po dostopnih cenah. Kakovostno kuhinjsko pohištvo za vsak proračun v Metliki in okolici.",
+    "priceRange": "€€",
+    "image": "https://top-kuhinja.eu/showcase/kitchen-1.jpeg"
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
   <style>
@@ -282,6 +326,93 @@
     .whatsapp-btn:hover { transform: scale(1.1); box-shadow: 0 8px 30px rgba(37,211,102,0.5); }
     .whatsapp-btn svg { width: 30px; height: 30px; fill: white; }
 
+    /* ── SHOWCASE ── */
+    .showcase { background: var(--white); }
+    .showcase-header { text-align: center; max-width: 600px; margin: 0 auto 3.5rem; }
+    .showcase-header .subtitle { margin: 0 auto; }
+
+    .slider-wrap { position: relative; }
+
+    /* Main stage */
+    .slider-stage {
+      position: relative; overflow: hidden;
+      border-radius: 20px;
+      background: var(--espresso);
+      aspect-ratio: 16 / 9;
+      box-shadow: 0 12px 50px rgba(61,43,31,0.18);
+    }
+    .slider-stage img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%; object-fit: cover;
+      opacity: 0; transition: opacity 0.55s ease;
+      pointer-events: none;
+    }
+    .slider-stage img.active { opacity: 1; pointer-events: auto; }
+
+    /* Arrow buttons */
+    .slider-btn {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      z-index: 10; cursor: pointer;
+      width: 52px; height: 52px; border-radius: 50%;
+      background: rgba(248,244,238,0.92);
+      border: 2px solid var(--sand);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(61,43,31,0.18);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .slider-btn:hover { background: var(--warm); border-color: var(--warm); transform: translateY(-50%) scale(1.08); }
+    .slider-btn:hover svg { stroke: var(--white); }
+    .slider-btn svg { width: 20px; height: 20px; stroke: var(--oak); stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .slider-prev { left: -26px; }
+    .slider-next { right: -26px; }
+
+    /* Counter badge */
+    .slider-counter {
+      position: absolute; bottom: 18px; right: 22px; z-index: 10;
+      background: rgba(61,43,31,0.65); backdrop-filter: blur(6px);
+      color: var(--sand); font-size: 0.8rem; font-weight: 700;
+      letter-spacing: 1px; padding: 0.3rem 0.8rem; border-radius: 20px;
+    }
+
+    /* Dots */
+    .slider-dots {
+      display: flex; justify-content: center; gap: 8px;
+      margin-top: 1.6rem;
+    }
+    .slider-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--sand); border: none; cursor: pointer;
+      padding: 0; transition: background 0.25s, transform 0.25s;
+    }
+    .slider-dot.active { background: var(--oak); transform: scale(1.4); }
+
+    /* Thumbnails */
+    .slider-thumbs {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 8px; margin-top: 1.2rem;
+    }
+    .slider-thumb {
+      aspect-ratio: 1; border-radius: 10px; overflow: hidden;
+      cursor: pointer; border: 2px solid transparent;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+    .slider-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .slider-thumb.active { border-color: var(--oak); transform: scale(1.05); }
+    .slider-thumb:hover { border-color: var(--warm); }
+
+    @media (max-width: 900px) {
+      .slider-thumbs { grid-template-columns: repeat(5, 1fr); }
+      .slider-prev { left: -18px; }
+      .slider-next { right: -18px; }
+    }
+    @media (max-width: 620px) {
+      .slider-thumbs { grid-template-columns: repeat(5, 1fr); gap: 5px; }
+      .slider-btn { width: 40px; height: 40px; }
+      .slider-prev { left: -14px; }
+      .slider-next { right: -14px; }
+    }
+
     /* FOOTER */
     footer { background: var(--espresso); color: rgba(255,255,255,0.6); padding: 4rem 5% 2rem; }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
@@ -319,11 +450,12 @@
 <nav id="navbar">
   <a class="nav-logo" href="#">Top <span>Kuhinja</span></a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#collections">Collections</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="#testimonials">Reviews</a></li>
-    <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+    <li><a href="#about">O nas</a></li>
+    <li><a href="#collections">Kolekcije</a></li>
+    <li><a href="#process">Postopek</a></li>
+    <li><a href="#showcase">Galerija</a></li>
+    <li><a href="#testimonials">Mnenja</a></li>
+    <li><a href="#contact" class="nav-cta">Pridobi ponudbo</a></li>
   </ul>
 </nav>
 
@@ -334,43 +466,43 @@
   </video>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <span class="hero-tag">Handcrafted Kitchen Furniture</span>
-    <h1>Kitchens Where <em>Memories</em> Are Made</h1>
-    <p>We design and craft premium kitchens tailored to your home, your taste, and your life — blending natural materials with timeless style.</p>
+    <span class="hero-tag">Kuhinjsko pohištvo po meri</span>
+    <h1>Kuhinje po meri – <em>kakovost</em> po dostopni ceni</h1>
+    <p>Oblikujemo in izdelujemo kuhinje po meri, prilagojene vašemu domu, okusu in življenjskemu slogu – iz naravnih materialov, za vsak proračun.</p>
     <div class="hero-buttons">
-      <a href="#collections" class="btn-primary">Explore Collections</a>
-      <a href="#contact" class="btn-secondary">Free Consultation</a>
+      <a href="#collections" class="btn-primary">Oglej si kolekcije</a>
+      <a href="#contact" class="btn-secondary">Brezplačna konzultacija</a>
     </div>
   </div>
 </section>
 
 <!-- STATS BAR -->
 <div class="stats-bar">
-  <div class="stat"><div class="stat-number">1,200+</div><div class="stat-label">Kitchens Delivered</div></div>
-  <div class="stat"><div class="stat-number">15+</div><div class="stat-label">Years of Experience</div></div>
-  <div class="stat"><div class="stat-number">98%</div><div class="stat-label">Customer Satisfaction</div></div>
-  <div class="stat"><div class="stat-number">5 yr</div><div class="stat-label">Warranty Included</div></div>
+  <div class="stat"><div class="stat-number">1.200+</div><div class="stat-label">Dostavljenih kuhinj</div></div>
+  <div class="stat"><div class="stat-number">15+</div><div class="stat-label">Let izkušenj</div></div>
+  <div class="stat"><div class="stat-number">98%</div><div class="stat-label">Zadovoljstvo strank</div></div>
+  <div class="stat"><div class="stat-number">5 let</div><div class="stat-label">Garancija</div></div>
 </div>
 
 <!-- ABOUT -->
 <section class="about" id="about">
   <div class="about-grid">
     <div class="about-image">
-      <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80" alt="Warm kitchen interior" />
-      <div class="about-badge"><strong>15+</strong><span>Years crafting kitchens</span></div>
+      <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80" alt="moderna kuhinja po meri v slovenskem domu" loading="lazy" />
+      <div class="about-badge"><strong>15+</strong><span>Let izdelave kuhinj</span></div>
     </div>
     <div class="about-text">
-      <span class="section-tag">Our Story</span>
-      <h2>Built With Passion, Designed for Life</h2>
-      <p>At Top Kuhinja, we believe the kitchen is the heart of every home. Since our founding, we've been creating spaces where families gather, meals are shared, and stories are told.</p>
-      <p>Every kitchen we build is a unique collaboration — we listen carefully, design thoughtfully, and craft with precision using natural woods and premium hardware.</p>
+      <span class="section-tag">Naša zgodba</span>
+      <h2>Ustvarjeno s strastjo, zasnovano za življenje</h2>
+      <p>V Top Kuhinji verjamemo, da je kuhinja srce vsakega doma. Že od začetka ustvarjamo prostore, kjer se družine zbirajo, delijo obroke in pišejo skupne zgodbe.</p>
+      <p>Vsaka kuhinja, ki jo zgradimo, je edinstveno sodelovanje – pozorno poslušamo, premišljeno načrtujemo in z natančnostjo izdelujemo iz naravnega lesa in kakovostne opreme. Dostopna cena ne pomeni kompromisa pri kakovosti.</p>
       <div class="about-perks">
-        <div class="perk"><div class="perk-icon">🌿</div> Sustainably sourced natural wood materials</div>
-        <div class="perk"><div class="perk-icon">✏️</div> Custom designs tailored to your space</div>
-        <div class="perk"><div class="perk-icon">🔧</div> Expert installation by certified craftsmen</div>
-        <div class="perk"><div class="perk-icon">🛡️</div> 5-year comprehensive warranty</div>
+        <div class="perk"><div class="perk-icon">🌿</div> Les iz trajnostnih virov</div>
+        <div class="perk"><div class="perk-icon">✏️</div> Kuhinje po meri – prilagojene vašemu prostoru</div>
+        <div class="perk"><div class="perk-icon">🔧</div> Strokovna montaža s certificiranimi mizarji</div>
+        <div class="perk"><div class="perk-icon">🛡️</div> 5-letna celovita garancija</div>
       </div>
-      <a href="#contact" class="btn-primary">Start Your Project</a>
+      <a href="#contact" class="btn-primary">Začni svoj projekt</a>
     </div>
   </div>
 </section>
@@ -378,116 +510,191 @@
 <!-- COLLECTIONS -->
 <section class="collections" id="collections">
   <div class="collections-header">
-    <span class="section-tag">Our Collections</span>
-    <h2>Find Your Perfect Kitchen Style</h2>
-    <p class="subtitle">From rustic charm to clean Nordic lines — every collection is crafted to bring warmth and character to your home.</p>
+    <span class="section-tag">Naše kolekcije</span>
+    <h2>Poišči svojo popolno kuhinjo po meri</h2>
+    <p class="subtitle">Od rustikalnega šarma do čistih nordijskih linij – vsaka kolekcija je zasnovana tako, da v vaš dom prinese toplino in karakter po dostopni ceni.</p>
   </div>
   <div class="cards-grid">
     <div class="card">
-      <div class="card-img"><span class="card-label">Bestseller</span><img src="https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=600&q=80" alt="Natural Oak kitchen" /></div>
-      <div class="card-body"><h3>Natural Oak</h3><p>Warm honey tones and visible wood grain bring organic beauty to your everyday cooking space.</p><a href="#contact" class="card-link">View Details →</a></div>
+      <div class="card-img"><span class="card-label">Uspešnica</span><img src="https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=600&q=80" alt="kuhinja po meri naravni hrast ugodna cena" loading="lazy" /></div>
+      <div class="card-body"><h3>Naravni hrast</h3><p>Topli medeni toni in vidna lesna žila prinašata organsko lepoto v vaš vsakodnevni kuhinjski prostor.</p><a href="#contact" class="card-link">Oglej si →</a></div>
     </div>
     <div class="card">
-      <div class="card-img"><span class="card-label">New 2025</span><img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=600&q=80" alt="Nordic White kitchen" /></div>
-      <div class="card-body"><h3>Nordic White</h3><p>Clean, airy lines paired with natural textures for a light and timeless Scandinavian aesthetic.</p><a href="#contact" class="card-link">View Details →</a></div>
+      <div class="card-img"><span class="card-label">Novost 2025</span><img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=600&q=80" alt="moderna bela kuhinja po meri nordijski slog" loading="lazy" /></div>
+      <div class="card-body"><h3>Nordijska bela</h3><p>Čiste, lahkotne linije v kombinaciji z naravnimi teksturami za svetel in brezčasen skandinavski estetski slog.</p><a href="#contact" class="card-link">Oglej si →</a></div>
     </div>
     <div class="card">
-      <div class="card-img"><span class="card-label">Premium</span><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80" alt="Dark Walnut kitchen" /></div>
-      <div class="card-body"><h3>Dark Walnut</h3><p>Rich, deep tones with a sophisticated finish — for those who want a kitchen as bold as their taste.</p><a href="#contact" class="card-link">View Details →</a></div>
+      <div class="card-img"><span class="card-label">Premium</span><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80" alt="temna kuhinja oreh po meri premium kakovost" loading="lazy" /></div>
+      <div class="card-body"><h3>Temni orah</h3><p>Bogati, globoki toni s sofisticiranim zaključkom – za tiste, ki si želijo kuhinjo tako drzno kot njihov okus.</p><a href="#contact" class="card-link">Oglej si →</a></div>
     </div>
     <div class="card">
-      <div class="card-img"><span class="card-label">Classic</span><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Country House kitchen" /></div>
-      <div class="card-body"><h3>Country House</h3><p>Shaker-style cabinet doors and hand-painted finishes evoke the timeless warmth of countryside living.</p><a href="#contact" class="card-link">View Details →</a></div>
+      <div class="card-img"><span class="card-label">Klasika</span><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="klasična kuhinja po meri podeželski slog Slovenija" loading="lazy" /></div>
+      <div class="card-body"><h3>Podeželska hiša</h3><p>Shakerjeva vrata in ročno barvani zaključki zbujajo brezčasno toplino podeželskega življenja.</p><a href="#contact" class="card-link">Oglej si →</a></div>
     </div>
     <div class="card">
-      <div class="card-img"><span class="card-label">Trending</span><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=600&q=80" alt="Sage Green kitchen" /></div>
-      <div class="card-body"><h3>Sage Green</h3><p>Nature-inspired hues blended with matte textures — a calming, stylish take on modern kitchens.</p><a href="#contact" class="card-link">View Details →</a></div>
+      <div class="card-img"><span class="card-label">Trend</span><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=600&q=80" alt="zelena kuhinja po meri mat zaključek moderna" loading="lazy" /></div>
+      <div class="card-body"><h3>Žajbljna zelena</h3><p>Z naravo navdihnjeni odtenki v kombinaciji s mat teksturami – umirjen, stylish pogled na sodobne kuhinje.</p><a href="#contact" class="card-link">Oglej si →</a></div>
     </div>
     <div class="card">
-      <div class="card-img"><span class="card-label">Bespoke</span><img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80" alt="Custom Design kitchen" /></div>
-      <div class="card-body"><h3>Fully Custom</h3><p>Your vision, our craft. Work directly with our designers to build the kitchen you've always imagined.</p><a href="#contact" class="card-link">Enquire Now →</a></div>
+      <div class="card-img"><span class="card-label">Po naročilu</span><img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80" alt="kuhinja po meri po naročilu Metlika Slovenija" loading="lazy" /></div>
+      <div class="card-body"><h3>Popolnoma po meri</h3><p>Vaša vizija, naše mojstrstvo. Sodelujte neposredno z našimi oblikovalci in ustvarite kuhinjo svojih sanj.</p><a href="#contact" class="card-link">Povpraševanje →</a></div>
     </div>
   </div>
 </section>
 
 <!-- PROCESS -->
 <section class="process" id="process">
-  <span class="section-tag" style="color: var(--warm);">How We Work</span>
-  <h2>From Dream to Done in 4 Steps</h2>
-  <p class="subtitle">We make the journey from first sketch to final installation smooth, transparent, and enjoyable.</p>
+  <span class="section-tag" style="color: var(--warm);">Kako delamo</span>
+  <h2>Od sanje do kuhinje v 4 korakih</h2>
+  <p class="subtitle">Pot od prve skice do končne montaže naredimo gladko, pregledno in prijetno – brez skritih stroškov.</p>
   <div class="steps">
-    <div class="step"><div class="step-num">01</div><h3>Free Consultation</h3><p>We visit your home, measure the space, and understand your lifestyle, needs, and budget.</p></div>
-    <div class="step"><div class="step-num">02</div><h3>Design & Quote</h3><p>Our designers create 3D visualisations and a detailed quote — no surprises, no hidden costs.</p></div>
-    <div class="step"><div class="step-num">03</div><h3>Crafting</h3><p>Your kitchen is built in our workshop using premium materials and quality-checked at every stage.</p></div>
-    <div class="step"><div class="step-num">04</div><h3>Installation</h3><p>Our expert team installs everything cleanly and precisely, leaving you with a perfect kitchen.</p></div>
+    <div class="step"><div class="step-num">01</div><h3>Brezplačna konzultacija</h3><p>Obiščemo vaš dom, izmerimo prostor in razumemo vaš življenjski slog, potrebe in proračun.</p></div>
+    <div class="step"><div class="step-num">02</div><h3>Oblikovanje in ponudba</h3><p>Naši oblikovalci ustvarijo 3D vizualizacije in podrobno ponudbo – brez presenečenj, brez skritih stroškov.</p></div>
+    <div class="step"><div class="step-num">03</div><h3>Izdelava</h3><p>Vaša kuhinja se izdela v naši delavnici iz kakovostnih materialov in je preverjena v vsaki fazi.</p></div>
+    <div class="step"><div class="step-num">04</div><h3>Montaža</h3><p>Naša ekipa strokovno namesti vse čisto in natančno – rezultat je popolna kuhinja, ki si jo je mogoče privoščiti.</p></div>
   </div>
 </section>
 
 <!-- FEATURES -->
 <section class="features" id="features">
-  <span class="section-tag">Why Choose Us</span>
-  <h2>Quality You Can Feel at Every Touch</h2>
+  <span class="section-tag">Zakaj mi</span>
+  <h2>Kakovost, ki jo začutiš ob vsakem dotiku</h2>
   <div class="features-grid">
-    <div class="feature-card"><div class="feature-icon">🌳</div><h3>Natural Materials</h3><p>We use only certified, sustainably sourced wood and eco-friendly finishes — beautiful and responsible.</p></div>
-    <div class="feature-card"><div class="feature-icon">📐</div><h3>Precision Craftsmanship</h3><p>Every door, drawer, and joint is hand-finished to exact tolerances by our experienced craftsmen.</p></div>
-    <div class="feature-card"><div class="feature-icon">🎨</div><h3>Unlimited Colours</h3><p>Choose from 200+ RAL colours and wood stains to match any interior — or bring your own swatch.</p></div>
-    <div class="feature-card"><div class="feature-icon">🔇</div><h3>Soft-Close Hardware</h3><p>All cabinets include premium Blum hinges and drawer systems — silent, smooth, built to last decades.</p></div>
-    <div class="feature-card"><div class="feature-icon">📏</div><h3>Made-to-Measure</h3><p>No standard sizes — every kitchen is custom-built to fit your exact space down to the millimetre.</p></div>
-    <div class="feature-card"><div class="feature-icon">🛡️</div><h3>5-Year Warranty</h3><p>We stand behind our work. Full warranty on all materials and installation — zero compromise.</p></div>
+    <div class="feature-card"><div class="feature-icon">🌳</div><h3>Naravni materiali</h3><p>Uporabljamo izključno certificiran les iz trajnostnih virov in ekološke zaključne obloge – lepe in odgovorne.</p></div>
+    <div class="feature-card"><div class="feature-icon">📐</div><h3>Natančno mojstrstvo</h3><p>Vsaka vrata, predal in spoj so ročno dodelani na točne tolerance s strani naših izkušenih mizarjev.</p></div>
+    <div class="feature-card"><div class="feature-icon">🎨</div><h3>Neomejene barve</h3><p>Izberite med 200+ RAL barvami in lesnimi lazurami za vsak interijer – ali prinesite svojo vzorčno ploščo.</p></div>
+    <div class="feature-card"><div class="feature-icon">🔇</div><h3>Tiho zapiranje</h3><p>Vse omarice vključujejo vrhunske Blum tečaje in sisteme predal – tiho, gladko, zasnovano za desetletja.</p></div>
+    <div class="feature-card"><div class="feature-icon">📏</div><h3>Kuhinje po meri</h3><p>Brez standardnih mer – vsaka kuhinja je izdelana po meri za vaš točen prostor do milimetra natančno.</p></div>
+    <div class="feature-card"><div class="feature-icon">🛡️</div><h3>5-letna garancija</h3><p>Za naše delo stojimo. Polna garancija na vse materiale in montažo – brez kompromisov.</p></div>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
 <section class="testimonials" id="testimonials">
   <div class="testimonials-header">
-    <span class="section-tag">Happy Customers</span>
-    <h2>Loved by Families Across the Region</h2>
-    <p class="subtitle">Don't just take our word for it — hear from the people who cook in our kitchens every day.</p>
+    <span class="section-tag">Zadovoljne stranke</span>
+    <h2>Priljubljeni pri družinah po vsej Sloveniji</h2>
+    <p class="subtitle">Ne verjemite nam samo na besedo – prisluhnite ljudem, ki vsak dan kuhajo v naših kuhinjah.</p>
   </div>
   <div class="reviews-grid">
     <div class="review">
       <div class="stars">★★★★★</div>
-      <p>"From the first consultation to the final installation, the team at Top Kuhinja was professional, creative, and truly cared about getting it right. Our kitchen is stunning."</p>
-      <div class="reviewer"><div class="reviewer-avatar">MK</div><div><div class="reviewer-name">Maja Kovač</div><div class="reviewer-loc">Ljubljana, Slovenia</div></div></div>
+      <p>„Od prve konzultacije do končne montaže je bila ekipa Top Kuhinja profesionalna, kreativna in res ji je bilo mar, da vse pride prav. Naša kuhinja je čudovita."</p>
+      <div class="reviewer"><div class="reviewer-avatar">MK</div><div><div class="reviewer-name">Maja Kovač</div><div class="reviewer-loc">Ljubljana, Slovenija</div></div></div>
     </div>
     <div class="review">
       <div class="stars">★★★★★</div>
-      <p>"We renovated our entire kitchen and couldn't be happier. The quality of the materials, the attention to detail, and the warmth of the team made the whole experience wonderful."</p>
-      <div class="reviewer"><div class="reviewer-avatar">TH</div><div><div class="reviewer-name">Tomislav Horvatić</div><div class="reviewer-loc">Zagreb, Croatia</div></div></div>
+      <p>„Prenovili smo celotno kuhinjo in ne bi mogli biti srečnejši. Kakovost materialov, pozornost do detajlov in prijaznost ekipe so naredili celotno izkušnjo nepozabno."</p>
+      <div class="reviewer"><div class="reviewer-avatar">BP</div><div><div class="reviewer-name">Bojan Petrovič</div><div class="reviewer-loc">Novo Mesto, Slovenija</div></div></div>
     </div>
     <div class="review">
       <div class="stars">★★★★★</div>
-      <p>"Ordered a fully custom kitchen — they worked with us every step of the way. The 3D design helped us visualise everything perfectly. Delivered on time and on budget!"</p>
-      <div class="reviewer"><div class="reviewer-avatar">AN</div><div><div class="reviewer-name">Ana Novak</div><div class="reviewer-loc">Maribor, Slovenia</div></div></div>
+      <p>„Naročili smo kuhinjo popolnoma po meri – z nami so bili prisotni na vsakem koraku. 3D oblikovanje nam je pomagalo vse perfektno vizualizirati. Dostavljeno pravočasno in v okviru proračuna!"</p>
+      <div class="reviewer"><div class="reviewer-avatar">AN</div><div><div class="reviewer-name">Ana Novak</div><div class="reviewer-loc">Maribor, Slovenija</div></div></div>
     </div>
+  </div>
+</section>
+
+<!-- SHOWCASE -->
+<section class="showcase" id="showcase">
+  <div class="showcase-header">
+    <span class="section-tag">Naše delo</span>
+    <h2>Kuhinje, ki smo jih ustvarili</h2>
+    <p class="subtitle">Vsak projekt ima svojo zgodbo. Oglejte si naše nedavne izvedbe in se navdahnite za svojo sanjsko kuhinjo po meri.</p>
+  </div>
+
+  <div class="slider-wrap">
+    <!-- Main stage -->
+    <div class="slider-stage" id="sliderStage">
+      <img src="showcase/kitchen-1.jpeg"  alt="kuhinja po meri – referenca Top Kuhinja Metlika 1"  class="active" />
+      <img src="showcase/kitchen-2.jpeg"  alt="moderna kuhinja po meri ugodna cena 2"  loading="lazy" />
+      <img src="showcase/kitchen-3.jpeg"  alt="kuhinjsko pohištvo po meri Slovenija 3"  loading="lazy" />
+      <img src="showcase/kitchen-4.jpeg"  alt="kuhinja na ključ Top Kuhinja 4"  loading="lazy" />
+      <img src="showcase/kitchen-5.jpeg"  alt="dostopna kuhinja po meri 5"  loading="lazy" />
+      <img src="showcase/kitchen-6.jpeg"  alt="kuhinja po meri referenca Metlika 6"  loading="lazy" />
+      <img src="showcase/kitchen-7.jpeg"  alt="moderna kuhinja po meri Slovenija 7"  loading="lazy" />
+      <img src="showcase/kitchen-8.jpeg"  alt="kuhinjsko pohištvo po meri ugodno 8"  loading="lazy" />
+      <img src="showcase/kitchen-9.jpeg"  alt="kuhinja po naročilu Top Kuhinja 9"  loading="lazy" />
+      <img src="showcase/kitchen-10.jpeg" alt="kakovostna kuhinja po meri 10" loading="lazy" />
+      <img src="showcase/kitchen-11.jpeg" alt="kuhinja po meri referenca 11" loading="lazy" />
+      <img src="showcase/kitchen-12.jpeg" alt="dostopna moderna kuhinja 12" loading="lazy" />
+      <img src="showcase/kitchen-13.jpeg" alt="kuhinja po meri Metlika Slovenija 13" loading="lazy" />
+      <img src="showcase/kitchen-14.jpeg" alt="kuhinjsko pohištvo po meri 14" loading="lazy" />
+      <img src="showcase/kitchen-15.jpeg" alt="kuhinja na ključ referenca 15" loading="lazy" />
+      <img src="showcase/kitchen-16.jpeg" alt="moderna kuhinja po meri 16" loading="lazy" />
+      <img src="showcase/kitchen-17.jpeg" alt="kuhinja po meri ugodne cene 17" loading="lazy" />
+      <img src="showcase/kitchen-18.jpeg" alt="kakovostna kuhinja po meri 18" loading="lazy" />
+      <img src="showcase/kitchen-19.jpeg" alt="kuhinja po naročilu Slovenija 19" loading="lazy" />
+      <img src="showcase/kitchen-20.jpeg" alt="kuhinja po meri Top Kuhinja 20" loading="lazy" />
+      <span class="slider-counter"><span id="sliderCurrent">1</span> / 20</span>
+    </div>
+
+    <!-- Prev / Next -->
+    <button class="slider-btn slider-prev" id="sliderPrev" aria-label="Prejšnja slika">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="slider-btn slider-next" id="sliderNext" aria-label="Naslednja slika">
+      <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+    </button>
+  </div>
+
+  <!-- Dots -->
+  <div class="slider-dots" id="sliderDots"></div>
+
+  <!-- Thumbnails -->
+  <div class="slider-thumbs" id="sliderThumbs">
+    <div class="slider-thumb active" data-index="0"><img src="showcase/kitchen-1.jpeg"  alt="" /></div>
+    <div class="slider-thumb" data-index="1"><img src="showcase/kitchen-2.jpeg"  alt="" /></div>
+    <div class="slider-thumb" data-index="2"><img src="showcase/kitchen-3.jpeg"  alt="" /></div>
+    <div class="slider-thumb" data-index="3"><img src="showcase/kitchen-4.jpeg"  alt="" /></div>
+    <div class="slider-thumb" data-index="4"><img src="showcase/kitchen-5.jpeg"  alt="" /></div>
+    <div class="slider-thumb" data-index="5"><img src="showcase/kitchen-6.jpeg"  alt="" /></div>
+    <div class="slider-thumb" data-index="6"><img src="showcase/kitchen-7.jpeg"  alt="" /></div>
+    <div class="slider-thumb" data-index="7"><img src="showcase/kitchen-8.jpeg"  alt="" /></div>
+    <div class="slider-thumb" data-index="8"><img src="showcase/kitchen-9.jpeg"  alt="" /></div>
+    <div class="slider-thumb" data-index="9"><img src="showcase/kitchen-10.jpeg" alt="" /></div>
+    <div class="slider-thumb" data-index="10"><img src="showcase/kitchen-11.jpeg" alt="" /></div>
+    <div class="slider-thumb" data-index="11"><img src="showcase/kitchen-12.jpeg" alt="" /></div>
+    <div class="slider-thumb" data-index="12"><img src="showcase/kitchen-13.jpeg" alt="" /></div>
+    <div class="slider-thumb" data-index="13"><img src="showcase/kitchen-14.jpeg" alt="" /></div>
+    <div class="slider-thumb" data-index="14"><img src="showcase/kitchen-15.jpeg" alt="" /></div>
+    <div class="slider-thumb" data-index="15"><img src="showcase/kitchen-16.jpeg" alt="" /></div>
+    <div class="slider-thumb" data-index="16"><img src="showcase/kitchen-17.jpeg" alt="" /></div>
+    <div class="slider-thumb" data-index="17"><img src="showcase/kitchen-18.jpeg" alt="" /></div>
+    <div class="slider-thumb" data-index="18"><img src="showcase/kitchen-19.jpeg" alt="" /></div>
+    <div class="slider-thumb" data-index="19"><img src="showcase/kitchen-20.jpeg" alt="" /></div>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta-section">
-  <h2>Ready to Design Your Dream Kitchen?</h2>
-  <p>Book a free, no-obligation consultation and let our designers bring your vision to life.</p>
-  <a href="#contact" class="btn-primary">Get a Free Quote</a>
+  <h2>Pripravljen na kuhinjo svojih sanj?</h2>
+  <p>Rezervirajte brezplačno konzultacijo brez obveznosti in pustite, da naši oblikovalci uresničijo vašo vizijo – po ceni, ki vam ustreza.</p>
+  <a href="#contact" class="btn-primary">Pridobi brezplačno ponudbo</a>
 </section>
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div style="max-width:540px;">
-    <span class="section-tag">Get in Touch</span>
-    <h2>Let's Talk About Your Kitchen</h2>
-    <p class="subtitle">Fill in the form and our team will get back to you within 24 hours — or call us directly.</p>
+    <span class="section-tag">Kontaktirajte nas</span>
+    <h2>Pogovorimo se o vaši kuhinji po meri</h2>
+    <p class="subtitle">Izpolnite obrazec in naša ekipa vam bo odgovorila v 24 urah – ali pa nas pokličite neposredno.</p>
   </div>
   <div class="contact-grid">
     <div class="contact-info">
-      <p>Whether you have a rough idea or detailed plans, we'd love to hear from you. Our consultations are free, friendly, and without pressure.</p>
+      <p>Bodisi imate grobo idejo ali podrobne načrte – radi bi vas slišali. Naše konzultacije so brezplačne, prijazne in brez pritiska.</p>
       <div class="contact-details">
         <div class="contact-item">
           <div class="contact-item-icon">📍</div>
-          <div class="contact-item-text"><strong>Showroom</strong><span>Visit us to see materials and samples in person</span></div>
+          <div class="contact-item-text"><strong>Razstavni salon</strong><span>Partizanski trg 21, 8330 Metlika</span></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📞</div>
+          <div class="contact-item-text"><strong>Telefon</strong><span><a href="tel:+38670610343" style="color:var(--muted);text-decoration:none;">+386 70 610 343</a></span></div>
         </div>
         <div class="contact-item">
           <div class="contact-item-icon">🌐</div>
-          <div class="contact-item-text"><strong>Website</strong><span>top-kuhinja.eu</span></div>
+          <div class="contact-item-text"><strong>Spletna stran</strong><span>top-kuhinja.eu</span></div>
         </div>
         <div class="contact-item">
           <div class="contact-item-icon">📧</div>
@@ -495,7 +702,7 @@
         </div>
         <div class="contact-item">
           <div class="contact-item-icon">🕐</div>
-          <div class="contact-item-text"><strong>Working Hours</strong><span>Mon–Fri 8:00–17:00 · Sat 9:00–13:00</span></div>
+          <div class="contact-item-text"><strong>Delovni čas</strong><span>Pon–Pet 8:00–17:00 · Sob 9:00–13:00</span></div>
         </div>
       </div>
     </div>
@@ -533,12 +740,12 @@
       <div class="form-group">
         <label for="interest">Zanimam se za</label>
         <select id="interest" name="interest">
-          <option>Natural Oak Collection</option>
-          <option>Nordic White Collection</option>
-          <option>Dark Walnut Collection</option>
-          <option>Country House Collection</option>
-          <option>Sage Green Collection</option>
-          <option>Fully Custom Kitchen</option>
+          <option>Kolekcija Naravni hrast</option>
+          <option>Kolekcija Nordijska bela</option>
+          <option>Kolekcija Temni orah</option>
+          <option>Kolekcija Podeželska hiša</option>
+          <option>Kolekcija Žajbljna zelena</option>
+          <option>Kuhinja popolnoma po meri</option>
         </select>
       </div>
       <div class="form-group">
@@ -556,29 +763,30 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <a class="nav-logo" href="#">Top <span style="color:var(--sand)">Kuhinja</span></a>
-      <p>Crafting kitchens that bring warmth, beauty, and joy to homes across the region since 2009.</p>
+      <p>Ustvarjamo kuhinje po meri, ki prinašajo toplino, lepoto in veselje v domove po vsej Sloveniji od leta 2009.</p>
+      <p style="margin-top:0.8rem;font-size:0.85rem;">Partizanski trg 21, 8330 Metlika<br><a href="tel:+38670610343" style="color:var(--warm);text-decoration:none;">+386 70 610 343</a></p>
     </div>
     <div class="footer-col">
-      <h4>Collections</h4>
+      <h4>Kolekcije</h4>
       <ul>
-        <li><a href="#collections">Natural Oak</a></li>
-        <li><a href="#collections">Nordic White</a></li>
-        <li><a href="#collections">Dark Walnut</a></li>
-        <li><a href="#collections">Country House</a></li>
-        <li><a href="#collections">Sage Green</a></li>
+        <li><a href="#collections">Naravni hrast</a></li>
+        <li><a href="#collections">Nordijska bela</a></li>
+        <li><a href="#collections">Temni orah</a></li>
+        <li><a href="#collections">Podeželska hiša</a></li>
+        <li><a href="#collections">Žajbljna zelena</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Company</h4>
+      <h4>Podjetje</h4>
       <ul>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#process">Our Process</a></li>
-        <li><a href="#testimonials">Reviews</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">O nas</a></li>
+        <li><a href="#process">Postopek dela</a></li>
+        <li><a href="#testimonials">Mnenja strank</a></li>
+        <li><a href="#contact">Kontakt</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Follow Us</h4>
+      <h4>Sledite nam</h4>
       <ul>
         <li><a href="#">Instagram</a></li>
         <li><a href="#">Facebook</a></li>
@@ -588,13 +796,13 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 top-kuhinja.eu · All rights reserved</span>
-    <span><a href="#">Privacy Policy</a> · <a href="#">Terms</a></span>
+    <span>© 2026 top-kuhinja.eu · Vse pravice pridržane · Colapis.eu</span>
+    <span><a href="#">Politika zasebnosti</a> · <a href="#">Pogoji uporabe</a></span>
   </div>
 </footer>
 
 <!-- WHATSAPP BUTTON -->
-<a href="https://wa.me/385912345678" class="whatsapp-btn" target="_blank" title="Chat on WhatsApp">
+<a href="https://wa.me/38670610343" class="whatsapp-btn" target="_blank" title="Pogovorite se z nami na WhatsApp">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
   </svg>
@@ -621,6 +829,69 @@
     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     observer.observe(el);
   });
+
+  /* ── SHOWCASE SLIDER ── */
+  (function () {
+    const TOTAL = 20;
+    const stage  = document.getElementById('sliderStage');
+    const slides = stage ? Array.from(stage.querySelectorAll('img')) : [];
+    const dotsEl = document.getElementById('sliderDots');
+    const thumbsEl = document.getElementById('sliderThumbs');
+    const counter = document.getElementById('sliderCurrent');
+    let current = 0;
+    let autoTimer;
+
+    // Build dots
+    for (let i = 0; i < TOTAL; i++) {
+      const d = document.createElement('button');
+      d.className = 'slider-dot' + (i === 0 ? ' active' : '');
+      d.setAttribute('aria-label', 'Go to image ' + (i + 1));
+      d.addEventListener('click', () => goTo(i));
+      dotsEl.appendChild(d);
+    }
+
+    function goTo(n) {
+      slides[current].classList.remove('active');
+      document.querySelectorAll('.slider-dot')[current].classList.remove('active');
+      document.querySelectorAll('.slider-thumb')[current].classList.remove('active');
+
+      current = (n + TOTAL) % TOTAL;
+
+      slides[current].classList.add('active');
+      document.querySelectorAll('.slider-dot')[current].classList.add('active');
+      const activeThumb = document.querySelectorAll('.slider-thumb')[current];
+      activeThumb.classList.add('active');
+      activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+
+      counter.textContent = current + 1;
+    }
+
+    document.getElementById('sliderPrev').addEventListener('click', () => { resetAuto(); goTo(current - 1); });
+    document.getElementById('sliderNext').addEventListener('click', () => { resetAuto(); goTo(current + 1); });
+
+    thumbsEl.querySelectorAll('.slider-thumb').forEach(t => {
+      t.addEventListener('click', () => { resetAuto(); goTo(+t.dataset.index); });
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft')  { resetAuto(); goTo(current - 1); }
+      if (e.key === 'ArrowRight') { resetAuto(); goTo(current + 1); }
+    });
+
+    // Touch / swipe
+    let touchStartX = 0;
+    stage.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    stage.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 40) { resetAuto(); goTo(current + (dx < 0 ? 1 : -1)); }
+    });
+
+    // Auto-advance every 4 s
+    function startAuto() { autoTimer = setInterval(() => goTo(current + 1), 4000); }
+    function resetAuto()  { clearInterval(autoTimer); startAuto(); }
+    startAuto();
+  })();
 </script>
 </body>
 </html>
