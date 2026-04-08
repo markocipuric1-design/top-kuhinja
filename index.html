@@ -31,6 +31,7 @@
     "name": "Top Kuhinja",
     "url": "https://top-kuhinja.eu",
     "telephone": "+38670610343",
+    "email": "info@top-kuhinja.eu",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Partizanski trg 21",
@@ -38,13 +39,69 @@
       "postalCode": "8330",
       "addressCountry": "SI"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 45.6478,
+      "longitude": 15.3172
+    },
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "09:00", "closes": "13:00" }
     ],
     "description": "Kuhinje po meri po dostopnih cenah. Kakovostno kuhinjsko pohištvo za vsak proračun v Metliki in okolici.",
     "priceRange": "€€",
-    "image": "https://top-kuhinja.eu/showcase/kitchen-1.jpeg"
+    "image": "https://top-kuhinja.eu/showcase/kitchen-1.jpeg",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "10",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Modeli kuhinj po meri",
+      "itemListElement": [
+        { "@type": "Offer", "name": "Model Basic", "description": "Kuhinja po meri 2,63 m", "price": "2500", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "Model Basic Plus", "description": "Kuhinja po meri 3,68 m", "price": "3500", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "Model Pro", "description": "Kuhinja po meri 3,80 m z otokom", "price": "4000", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "Model Pro Plus", "description": "Kuhinja po meri 4,00 m z otokom", "price": "4500", "priceCurrency": "EUR" }
+      ]
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Koliko stane kuhinja po meri?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Cene kuhinj po meri se začnejo pri 2.500 € za model Basic (2,63 m) in segajo do 4.500 € za model Pro Plus (4,00 m z vključenim kuhinjskim otokom)." }
+      },
+      {
+        "@type": "Question",
+        "name": "Kako dolgo traja izdelava kuhinje?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Vaša kuhinja je izdelana in dostavljena v treh tednih od potrditve naročila." }
+      },
+      {
+        "@type": "Question",
+        "name": "Ali je montaža vključena v ceno?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Dostavimo sestavljene module in elemente. Montaža je opcijska in se dogovori posebej." }
+      },
+      {
+        "@type": "Question",
+        "name": "Ali lahko izberem barvo kuhinje?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Da, barvo front in korpusa izberete po RAL lestvici – na voljo je več kot 200 barv." }
+      },
+      {
+        "@type": "Question",
+        "name": "Kakšna je garancija?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Na vse kuhinje nudimo 5-letno celovito garancijo na materiale in montažo." }
+      }
+    ]
   }
   </script>
 
@@ -528,7 +585,7 @@
 
 <!-- NAV -->
 <nav id="navbar">
-  <a class="nav-logo" href="#">Top <span>Kuhinja</span></a>
+  <a class="nav-logo" href="#home">Top <span>Kuhinja</span></a>
   <ul class="nav-links">
     <li><a href="#about">O nas</a></li>
     <li><a href="#collections">Kolekcije</a></li>
@@ -540,6 +597,7 @@
 </nav>
 
 <!-- HERO -->
+<main>
 <section class="hero" id="home">
   <video class="hero-video" autoplay muted loop playsinline>
     <source src="4360752-uhd_3840_2160_25fps.mp4" type="video/mp4">
@@ -908,6 +966,8 @@
 
   </div>
 </section>
+
+</main>
 
 <!-- FOOTER -->
 <footer style="padding:1.5rem 5%;">
