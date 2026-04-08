@@ -163,6 +163,24 @@
     }
     .nav-cta:hover { background: var(--oak) !important; }
 
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column; justify-content: center; gap: 5px;
+      width: 36px; height: 36px; cursor: pointer;
+      background: none; border: none; padding: 4px;
+      z-index: 101;
+    }
+    .hamburger span {
+      display: block; height: 2px; border-radius: 2px;
+      background: var(--espresso);
+      transition: transform 0.3s, opacity 0.3s, width 0.3s;
+      transform-origin: center;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
     /* HERO */
     .hero {
       min-height: 100vh;
@@ -573,7 +591,32 @@
     }
     @media (max-width: 620px) {
       nav { padding: 1rem 4%; }
-      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: fixed; top: 0; left: 0; right: 0;
+        background: rgba(248,244,238,0.98);
+        backdrop-filter: blur(12px);
+        flex-direction: column; align-items: center; justify-content: center;
+        gap: 0; list-style: none;
+        height: 100dvh;
+        z-index: 100;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { width: 100%; text-align: center; }
+      .nav-links a {
+        display: block; padding: 1.1rem 2rem;
+        font-size: 1.2rem; color: var(--espresso);
+        border-bottom: 1px solid var(--sand);
+      }
+      .nav-links li:last-child a { border-bottom: none; }
+      .nav-cta {
+        background: var(--green) !important;
+        border-radius: 0 !important;
+        padding: 1.1rem 2rem !important;
+        font-size: 1.2rem !important;
+        margin: 0 !important;
+      }
       .pricing-grid, .cards-grid, .features-grid, .reviews-grid, .steps { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
@@ -586,7 +629,7 @@
 <!-- NAV -->
 <nav id="navbar">
   <a class="nav-logo" href="#home">Top <span>Kuhinja</span></a>
-  <ul class="nav-links">
+  <ul class="nav-links" id="navLinks">
     <li><a href="#about">O nas</a></li>
     <li><a href="#collections">Kolekcije</a></li>
     <li><a href="#process">Postopek</a></li>
@@ -594,6 +637,9 @@
     <li><a href="#showcase">Galerija</a></li>
     <li><a href="#contact" class="nav-cta">Pridobi ponudbo</a></li>
   </ul>
+  <button class="hamburger" id="hamburger" aria-label="Odpri meni" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -988,6 +1034,24 @@
   const nav = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  /* Hamburger menu */
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
   });
 
   const observer = new IntersectionObserver((entries) => {
