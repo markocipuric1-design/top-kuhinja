@@ -783,10 +783,48 @@
         font-size: 1.2rem !important;
         margin: 0 !important;
       }
-      .pricing-grid, .cards-grid, .features-grid, .reviews-grid, .steps { grid-template-columns: 1fr 1fr; }
+      .cards-grid, .features-grid, .reviews-grid, .steps { grid-template-columns: 1fr 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
       section { padding: 4rem 5%; }
+
+      /* Pricing slider */
+      .pricing-slider-wrap { position: relative; }
+      .pricing-grid {
+        display: flex !important;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-padding-left: 5%;
+        -webkit-overflow-scrolling: touch;
+        gap: 1rem;
+        padding: 0.5rem 5% 1rem;
+        margin: 0 -5%;
+        scrollbar-width: none;
+      }
+      .pricing-grid::-webkit-scrollbar { display: none; }
+      .pricing-grid .card {
+        flex: 0 0 82%;
+        scroll-snap-align: start;
+        min-width: 0;
+      }
+      .swipe-hint {
+        display: flex; align-items: center; gap: 0.4rem;
+        justify-content: flex-start;
+        font-size: 0.8rem; color: var(--muted);
+        margin-bottom: 0.8rem;
+        transition: opacity 0.4s;
+      }
+      .swipe-hint.hidden { opacity: 0; pointer-events: none; }
+      .pricing-dots {
+        display: flex; justify-content: center; gap: 7px;
+        margin-top: 1rem;
+      }
+      .pricing-dot {
+        width: 7px; height: 7px; border-radius: 50%;
+        background: var(--sand); border: none; padding: 0; cursor: pointer;
+        transition: background 0.25s, transform 0.25s;
+      }
+      .pricing-dot.active { background: var(--oak); transform: scale(1.4); }
     }
   </style>
 </head>
@@ -866,7 +904,12 @@
     <h2>Izberite svoj model kuhinje</h2>
     <p class="subtitle">Vsak model je opremljen z izbranimi frontami, tiho zapiranje Blum, LED osvetlitvijo in 5-letno garancijo. Barvo front izberete sami.</p>
   </div>
-  <div class="pricing-grid">
+  <div class="pricing-slider-wrap">
+  <p class="swipe-hint" id="swipeHint">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>
+    Podrsaj za več modelov
+  </p>
+  <div class="pricing-grid" id="pricingGrid">
 
     <!-- BASIC -->
     <div class="card pricing-card">
@@ -970,6 +1013,8 @@
       </div>
     </div>
 
+  </div>
+  <div class="pricing-dots" id="pricingDots"></div>
   </div>
 </section>
 
@@ -1486,6 +1531,51 @@
       const open = details.classList.toggle('open');
       detailsBtn.textContent = open ? 'Skrij ▴' : 'Podrobnosti ▾';
     });
+  })();
+
+  /* ── PRICING SLIDER (mobile only) ── */
+  (function () {
+    const grid   = document.getElementById('pricingGrid');
+    const dotsEl = document.getElementById('pricingDots');
+    const hint   = document.getElementById('swipeHint');
+    if (!grid) return;
+
+    function isMobile() { return window.innerWidth <= 620; }
+
+    const cards = grid.querySelectorAll('.card');
+
+    // Build dots
+    cards.forEach((_, i) => {
+      const d = document.createElement('button');
+      d.className = 'pricing-dot' + (i === 0 ? ' active' : '');
+      d.setAttribute('aria-label', 'Model ' + (i + 1));
+      d.addEventListener('click', () => {
+        cards[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+      });
+      dotsEl.appendChild(d);
+    });
+
+    function updateDots() {
+      if (!isMobile()) return;
+      const cardWidth = grid.clientWidth * 0.82 + 16;
+      const active    = Math.round(grid.scrollLeft / cardWidth);
+      dotsEl.querySelectorAll('.pricing-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === active);
+      });
+    }
+
+    grid.addEventListener('scroll', () => {
+      updateDots();
+      if (hint) hint.classList.add('hidden');
+    }, { passive: true });
+
+    function toggleMobileUI() {
+      const mobile = isMobile();
+      dotsEl.style.display = mobile ? 'flex' : 'none';
+      if (hint) hint.style.display = mobile ? 'flex' : 'none';
+    }
+    toggleMobileUI();
+    window.addEventListener('resize', toggleMobileUI);
   })();
 
   /* ── FAQ ACCORDION ── */
