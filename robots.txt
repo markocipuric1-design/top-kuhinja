@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow:
 
-Sitemap: https://top-kuhinja.eu/sitemap.xml
+Sitemap: https://topkuhinja.eu/sitemap.xml
