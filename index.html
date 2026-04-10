@@ -3,17 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Top Kuhinja – Kuhinje po meri po dostopni ceni</title>
-  <meta name="description" content="Sanjska kuhinja ne sme biti privilegij. Top Kuhinja izdeluje kuhinje po meri za vsak proračun – brez kompromisov pri kakovosti. Brezplačna konzultacija." />
+  <title>Top Kuhinja Metlika – Kuhinje po meri po dostopni ceni | topkuhinja.eu</title>
+  <meta name="description" content="Kuhinje po meri v Metliki in Beli krajini po dostopnih cenah. Top Kuhinja – kakovostno kuhinjsko pohištvo od 2.500 €. Brezplačna konzultacija v 24 urah." />
+  <meta name="keywords" content="kuhinje po meri, kuhinja po meri Metlika, poceni kuhinje, kuhinjsko pohištvo, kuhinja po meri cena, kuhinje Bela krajina, moderne kuhinje, kuhinja na ključ" />
   <meta name="robots" content="index, follow" />
+  <meta name="author" content="Top Kuhinja" />
+  <meta name="theme-color" content="#3d2b1f" />
   <meta name="google-site-verification" content="tMUSXXDXEy-Uhq4X31GRtEPIA2L5RANlOOrEgTGW15g" />
   <link rel="canonical" href="https://topkuhinja.eu/" />
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://topkuhinja.eu/" />
-  <meta property="og:title"       content="Top Kuhinja – Kuhinje po meri po dostopni ceni" />
-  <meta property="og:description" content="Sanjska kuhinja ne sme biti privilegij. Top Kuhinja izdeluje kuhinje po meri za vsak proračun – brez kompromisov pri kakovosti." />
+  <meta property="og:title"       content="Top Kuhinja Metlika – Kuhinje po meri po dostopni ceni" />
+  <meta property="og:description" content="Kuhinje po meri v Metliki in Beli krajini od 2.500 €. Top Kuhinja – kakovostno kuhinjsko pohištvo za vsak proračun. Brezplačna konzultacija." />
   <meta property="og:image"       content="https://topkuhinja.eu/kuhinja-po-meri-top-kuhinja-metlika.jpeg" />
   <meta property="og:locale"      content="sl_SI" />
   <meta property="og:site_name"   content="Top Kuhinja" />
@@ -21,8 +24,8 @@
   <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:domain"      content="topkuhinja.eu" />
-  <meta name="twitter:title"       content="Top Kuhinja – Kuhinje po meri po dostopni ceni" />
-  <meta name="twitter:description" content="Sanjska kuhinja ne sme biti privilegij. Top Kuhinja – kuhinje po meri za vsak proračun." />
+  <meta name="twitter:title"       content="Top Kuhinja Metlika – Kuhinje po meri po dostopni ceni" />
+  <meta name="twitter:description" content="Kuhinje po meri v Metliki od 2.500 €. Top Kuhinja – kakovostno kuhinjsko pohištvo za vsak proračun." />
   <meta name="twitter:image"       content="https://topkuhinja.eu/kuhinja-po-meri-top-kuhinja-metlika.jpeg" />
 
   <!-- JSON-LD LocalBusiness -->
@@ -48,7 +51,7 @@
     },
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "09:00", "closes": "13:00" }
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "10:00", "closes": "14:00" }
     ],
     "description": "Kuhinje po meri po dostopnih cenah. Kakovostno kuhinjsko pohištvo za vsak proračun v Metliki in okolici.",
     "priceRange": "€€",
@@ -107,7 +110,10 @@
   }
   </script>
 
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; font-synthesis: none; }
@@ -669,6 +675,115 @@
     .footer-bottom span { font-size: 0.82rem; }
     .footer-bottom a { color: var(--warm); text-decoration: none; }
 
+    /* ── AVAILABILITY / CALENDAR ── */
+    .availability { background: var(--sand); }
+    .avail-intro { max-width: 560px; margin-bottom: 3.5rem; }
+    .avail-grid {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    /* Call info card */
+    .call-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(61,43,31,0.07);
+      position: sticky;
+      top: 90px;
+    }
+    .call-card-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .call-card h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--espresso); margin-bottom: 1.2rem; }
+    .schedule-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0.7rem 0; border-bottom: 1px solid var(--sand);
+      font-size: 0.9rem;
+    }
+    .schedule-row:last-child { border-bottom: none; }
+    .schedule-day { color: var(--espresso); font-weight: 500; }
+    .schedule-time { color: var(--green); font-weight: 700; font-size: 0.85rem; }
+    .call-phone {
+      display: flex; align-items: center; gap: 0.6rem;
+      margin-top: 1.5rem; padding: 0.9rem 1.2rem;
+      background: var(--espresso); border-radius: 12px;
+      color: var(--white); text-decoration: none;
+      font-weight: 700; font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+    .call-phone:hover { background: var(--oak); }
+    /* Calendar */
+    .calendar-nav {
+      display: flex; align-items: center; gap: 1rem;
+      margin-bottom: 1.8rem;
+    }
+    .cal-nav-btn {
+      background: var(--white); border: 1px solid var(--sand);
+      border-radius: 10px; width: 38px; height: 38px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; font-size: 1.1rem; color: var(--espresso);
+      transition: background 0.2s, border-color 0.2s; flex-shrink: 0;
+    }
+    .cal-nav-btn:hover { background: var(--espresso); color: var(--white); border-color: var(--espresso); }
+    .cal-nav-btn:disabled { opacity: 0.3; cursor: default; pointer-events: none; }
+    .cal-range-label { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--espresso); flex: 1; }
+    .cal-months-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+    }
+    .cal-month {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 1.2rem;
+      box-shadow: 0 2px 12px rgba(61,43,31,0.06);
+    }
+    .cal-month-title {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem; color: var(--espresso);
+      margin-bottom: 0.8rem; font-weight: 700;
+    }
+    .cal-weekdays {
+      display: grid; grid-template-columns: repeat(7, 1fr);
+      gap: 2px; margin-bottom: 4px;
+    }
+    .cal-wday {
+      text-align: center; font-size: 0.65rem;
+      font-weight: 700; color: var(--muted);
+      text-transform: uppercase; padding: 2px 0;
+    }
+    .cal-days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
+    .cal-day {
+      aspect-ratio: 1; display: flex; align-items: center;
+      justify-content: center; border-radius: 50%;
+      font-size: 0.72rem; cursor: default;
+    }
+    .cal-day.past { color: rgba(61,43,31,0.2); }
+    .cal-day.booked { color: rgba(61,43,31,0.35); }
+    .cal-day.available {
+      background: rgba(90,110,74,0.15);
+      color: var(--green); font-weight: 600;
+    }
+    .cal-day.today {
+      background: var(--espresso); color: var(--white);
+      font-weight: 700;
+    }
+    .cal-legend {
+      display: flex; gap: 1.5rem; margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .cal-legend-item {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.82rem; color: var(--muted);
+    }
+    .cal-legend-dot {
+      width: 12px; height: 12px; border-radius: 50%;
+    }
+    .cal-legend-dot.available { background: var(--green); opacity: 0.6; }
+    .cal-legend-dot.booked { background: var(--muted); opacity: 0.3; }
+    .cal-legend-dot.today { background: var(--espresso); }
+
     /* ── PRICING CARDS ── */
     .pricing-grid {
       display: grid;
@@ -763,6 +878,7 @@
     /* RESPONSIVE */
     @media (max-width: 1100px) {
       .pricing-grid { grid-template-columns: 1fr 1fr 1fr; }
+      .cal-months-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 900px) {
       .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
@@ -770,6 +886,9 @@
       .steps { grid-template-columns: 1fr 1fr; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
       .about-badge { bottom: 10px; right: 10px; }
+      .avail-grid { grid-template-columns: 1fr; }
+      .call-card { position: static; }
+      .cal-months-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 620px) {
       nav { padding: 1rem 4%; }
@@ -801,6 +920,8 @@
       }
       .cards-grid, .reviews-grid { grid-template-columns: 1fr 1fr; }
       .steps { grid-template-columns: 1fr; }
+      .cal-months-grid { grid-template-columns: 1fr; }
+      .cal-legend { gap: 1rem; }
 
       /* Features slider */
       .features-slider-wrap { position: relative; }
@@ -911,6 +1032,7 @@
     <li><a href="#process">Postopek</a></li>
     <li><a href="#testimonials">Mnenja</a></li>
     <li><a href="#faq">FAQ</a></li>
+    <li><a href="#availability">Termini</a></li>
     <li><a href="#showcase">Galerija</a></li>
     <li><a href="#contact" class="nav-cta">Pridobi ponudbo</a></li>
   </ul>
@@ -1290,6 +1412,64 @@
   </div>
 </section>
 
+<!-- AVAILABILITY -->
+<section class="availability" id="availability">
+  <div class="avail-intro">
+    <span class="section-tag">Razpoložljivost</span>
+    <h2>Kdaj smo na voljo</h2>
+    <p class="subtitle">Preverite naš urnik za klice ter razpoložljive termine za dobavo naročene kuhinje.</p>
+  </div>
+  <div class="avail-grid">
+
+    <!-- Call availability -->
+    <div class="call-card">
+      <div class="call-card-icon">📞</div>
+      <h3>Dosegljivost za klic</h3>
+      <div class="schedule-row">
+        <span class="schedule-day">Ponedeljek – Petek</span>
+        <span class="schedule-time">08:00 – 17:00</span>
+      </div>
+      <div class="schedule-row">
+        <span class="schedule-day">Sobota</span>
+        <span class="schedule-time">10:00 – 14:00</span>
+      </div>
+      <div class="schedule-row">
+        <span class="schedule-day">Nedelja</span>
+        <span class="schedule-time">10:00 – 14:00</span>
+      </div>
+      <a href="tel:+38670610343" class="call-phone">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+        +386 70 610 343
+      </a>
+    </div>
+
+    <!-- Delivery calendar -->
+    <div class="calendar-wrap">
+      <div class="calendar-nav">
+        <button class="cal-nav-btn" id="calPrev" aria-label="Prejšnji meseci">&#8592;</button>
+        <span class="cal-range-label" id="calRangeLabel"></span>
+        <button class="cal-nav-btn" id="calNext" aria-label="Naslednji meseci">&#8594;</button>
+      </div>
+      <div class="cal-months-grid" id="calMonthsGrid"></div>
+      <div class="cal-legend">
+        <div class="cal-legend-item">
+          <div class="cal-legend-dot available"></div>
+          <span>Prosto za dostavo</span>
+        </div>
+        <div class="cal-legend-item">
+          <div class="cal-legend-dot booked"></div>
+          <span>Zasedeno</span>
+        </div>
+        <div class="cal-legend-item">
+          <div class="cal-legend-dot today"></div>
+          <span>Danes</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="cta-section">
   <h2>Pripravljen na kuhinjo svojih sanj?</h2>
@@ -1322,7 +1502,7 @@
         </div>
         <div class="contact-item">
           <div class="contact-item-icon">📧</div>
-          <div class="contact-item-text"><strong>Email</strong><span>info@topkuhinja.eu</span></div>
+          <div class="contact-item-text"><strong>Email</strong><span><a href="mailto:info@topkuhinja.eu" style="color:var(--muted);text-decoration:none;">info@topkuhinja.eu</a></span></div>
         </div>
         <div class="contact-item">
           <div class="contact-item-icon">🕐</div>
@@ -1368,10 +1548,16 @@
           <option>Dolžina 3.68m</option>
           <option>Dolžina 3.80m</option>
           <option>Dolžina 4.00m</option>
+          <option selected>Dimenzije po meri</option>
           <option>Vgradni elementi</option>
-          <option>Dostava in vgradnja</option>
+          <option value="Dostava in vgradnja">Dostava in vgradnja</option>
           <option>Ostalo</option>
         </select>
+      </div>
+      <div class="form-group" id="deliveryDateGroup" style="display:none;">
+        <label for="deliveryDate">Želeni termin dostave</label>
+        <input type="date" id="deliveryDate" name="delivery-date" />
+        <small style="color:var(--muted);font-size:0.8rem;margin-top:0.4rem;display:block;">Prvi razpoložljivi termin: 5. julij 2026</small>
       </div>
       <div class="form-group">
         <label for="message">Imate dodatna vprašanja? Povejte več..</label>
@@ -1701,6 +1887,152 @@
     }
     toggleMobileUI();
     window.addEventListener('resize', toggleMobileUI);
+  })();
+
+  /* ── DELIVERY CALENDAR ── */
+  (function () {
+    const DELIVERY_START = new Date(2026, 6, 5); // 5. julij 2026
+    const CALENDAR_END   = new Date(2027, 11, 31); // 31. december 2027
+    const MONTHS_PER_PAGE = 3;
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const startYear  = today.getFullYear();
+    const startMonth = today.getMonth();
+
+    // total months from today to end
+    const totalMonths =
+      (CALENDAR_END.getFullYear() - startYear) * 12 +
+      (CALENDAR_END.getMonth() - startMonth) + 1;
+
+    let page = 0;
+    const maxPage = Math.ceil(totalMonths / MONTHS_PER_PAGE) - 1;
+
+    const grid      = document.getElementById('calMonthsGrid');
+    const label     = document.getElementById('calRangeLabel');
+    const btnPrev   = document.getElementById('calPrev');
+    const btnNext   = document.getElementById('calNext');
+    if (!grid) return;
+
+    const SL_MONTHS = ['Januar','Februar','Marec','April','Maj','Junij',
+                       'Julij','Avgust','September','Oktober','November','December'];
+    const SL_DAYS   = ['Po','To','Sr','Če','Pe','So','Ne'];
+
+    function renderMonths() {
+      grid.innerHTML = '';
+      const firstIdx = page * MONTHS_PER_PAGE;
+
+      // responsive: show 1 on mobile, 2 on tablet, 3 on desktop
+      const cols = window.innerWidth <= 620 ? 1 :
+                   window.innerWidth <= 1100 ? 2 : 3;
+      const count = Math.min(cols, totalMonths - firstIdx);
+
+      // build range label
+      const firstDate = new Date(startYear, startMonth + firstIdx, 1);
+      const lastDate  = new Date(startYear, startMonth + firstIdx + count - 1, 1);
+      label.textContent = count === 1
+        ? SL_MONTHS[firstDate.getMonth()] + ' ' + firstDate.getFullYear()
+        : SL_MONTHS[firstDate.getMonth()] + ' ' + firstDate.getFullYear() +
+          ' – ' + SL_MONTHS[lastDate.getMonth()] + ' ' + lastDate.getFullYear();
+
+      for (let i = 0; i < count; i++) {
+        const idx   = firstIdx + i;
+        if (idx >= totalMonths) break;
+        const year  = startYear  + Math.floor((startMonth + idx) / 12);
+        const month = (startMonth + idx) % 12;
+        grid.appendChild(buildMonth(year, month));
+      }
+
+      btnPrev.disabled = page === 0;
+      btnNext.disabled = (firstIdx + cols) >= totalMonths;
+    }
+
+    function buildMonth(year, month) {
+      const wrap = document.createElement('div');
+      wrap.className = 'cal-month';
+
+      // title
+      const title = document.createElement('div');
+      title.className = 'cal-month-title';
+      title.textContent = SL_MONTHS[month] + ' ' + year;
+      wrap.appendChild(title);
+
+      // weekday headers (Mon first)
+      const wdays = document.createElement('div');
+      wdays.className = 'cal-weekdays';
+      SL_DAYS.forEach(d => {
+        const wd = document.createElement('div');
+        wd.className = 'cal-wday';
+        wd.textContent = d;
+        wdays.appendChild(wd);
+      });
+      wrap.appendChild(wdays);
+
+      // days grid
+      const days = document.createElement('div');
+      days.className = 'cal-days';
+
+      const firstDay = new Date(year, month, 1);
+      // Monday-based offset (0=Mon … 6=Sun)
+      let offset = firstDay.getDay() - 1;
+      if (offset < 0) offset = 6;
+
+      for (let e = 0; e < offset; e++) {
+        const empty = document.createElement('div');
+        days.appendChild(empty);
+      }
+
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+      for (let d = 1; d <= daysInMonth; d++) {
+        const date = new Date(year, month, d);
+        const cell = document.createElement('div');
+        cell.className = 'cal-day';
+        cell.textContent = d;
+
+        if (date.getTime() === today.getTime()) {
+          cell.classList.add('today');
+        } else if (date < today) {
+          cell.classList.add('past');
+        } else if (date >= DELIVERY_START) {
+          cell.classList.add('available');
+        } else {
+          cell.classList.add('booked');
+        }
+        days.appendChild(cell);
+      }
+      wrap.appendChild(days);
+      return wrap;
+    }
+
+    btnPrev.addEventListener('click', () => { if (page > 0) { page--; renderMonths(); } });
+    btnNext.addEventListener('click', () => { if (page < maxPage) { page++; renderMonths(); } });
+    window.addEventListener('resize', renderMonths);
+
+    renderMonths();
+  })();
+
+  /* ── DELIVERY DATE PICKER ── */
+  (function () {
+    const select    = document.getElementById('interest');
+    const dateGroup = document.getElementById('deliveryDateGroup');
+    const dateInput = document.getElementById('deliveryDate');
+    if (!select) return;
+
+    const minDate = '2026-07-05';
+    const maxDate = '2027-12-31';
+    dateInput.min = minDate;
+    dateInput.max = maxDate;
+    dateInput.value = minDate;
+
+    function toggle() {
+      const show = select.value === 'Dostava in vgradnja';
+      dateGroup.style.display = show ? 'block' : 'none';
+      dateInput.required = show;
+    }
+
+    select.addEventListener('change', toggle);
+    toggle();
   })();
 
   /* ── FAQ ACCORDION ── */
